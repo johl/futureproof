@@ -9,3 +9,8 @@ application/models.pyc
 application/settings.pyc
 application/urls.pyc
 application/views.pyc
+
+views.pyc
+urls.pyc
+/application/views.pyc
+/application/urls.pyc
