@@ -1,2 +1,11 @@
 pkg_resources.pyc
 secret_keys.pyc
+pkg_resources.pyc
+secret_keys.pyc
+application/__init__.pyc
+application/decorators.pyc
+application/forms.pyc
+application/models.pyc
+application/settings.pyc
+application/urls.pyc
+application/views.pyc
