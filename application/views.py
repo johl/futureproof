@@ -27,7 +27,7 @@ def say_hello(username):
 def list_examples():
     """List all examples"""
     examples = ExampleModel.all()
-    return render_template('list_examples.html', examples=examples)
+    return render_template('index.html', examples=examples)
 
 
 @login_required
