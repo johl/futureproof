@@ -18,7 +18,7 @@ html
 	
 body
 	{
-	background: #705c6c url("images/fp_gradient_bg_04.jpg") repeat left top;
+	background: #705c6c url("../img/fp_gradient_bg_04.jpg") repeat left top;
     color: #000;
     font-family: Georgia, Times New Roman, serif;
     font-size: 13px;
@@ -31,7 +31,7 @@ body
 
 .triangle_container
 	{
-	background: url('images/fp_triangles_bg.png') center 50px no-repeat fixed;
+	background: url('../img/fp_triangles_bg.png') center 50px no-repeat fixed;
 	position: relative;
 	margin: 0 auto;
 	height: 100%;
@@ -89,11 +89,11 @@ body
 
 @font-face {
     font-family: 'SteelfishRegular';
-    src: url('fonts/steelfish_rg-webfont.eot');
-    src: url('fonts/steelfish_rg-webfont.eot?iefix') format('eot'),
-         url('fonts/steelfish_rg-webfont.woff') format('woff'),
-         url('fonts/steelfish_rg-webfont.ttf') format('truetype'),
-         url('fonts/steelfish_rg-webfont.svg#webfontg6LIwiL9') format('svg');
+    src: url('../fonts/steelfish_rg-webfont.eot');
+    src: url('../fonts/steelfish_rg-webfont.eot?iefix') format('eot'),
+         url('../fonts/steelfish_rg-webfont.woff') format('woff'),
+         url('../fonts/steelfish_rg-webfont.ttf') format('truetype'),
+         url('../fonts/steelfish_rg-webfont.svg#webfontg6LIwiL9') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -101,11 +101,11 @@ body
 
 @font-face {
     font-family: 'JosefinSlabLight';
-    src: url('fonts/JosefinSlab-Light-webfont.eot');
-    src: url('fonts/JosefinSlab-Light-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/JosefinSlab-Light-webfont.woff') format('woff'),
-         url('fonts/JosefinSlab-Light-webfont.ttf') format('truetype'),
-         url('fonts/JosefinSlab-Light-webfont.svg#JosefinSlabLight') format('svg');
+    src: url('../fonts/JosefinSlab-Light-webfont.eot');
+    src: url('../fonts/JosefinSlab-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/JosefinSlab-Light-webfont.woff') format('woff'),
+         url('../fonts/JosefinSlab-Light-webfont.ttf') format('truetype'),
+         url('../fonts/JosefinSlab-Light-webfont.svg#JosefinSlabLight') format('svg');
     font-weight: normal;
     font-style: normal;
 }
