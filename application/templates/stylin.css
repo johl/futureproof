@@ -1,0 +1,132 @@
+/* COLORS 
+
+Grey - #636363
+Green - #6aac10
+Red - #da2f30
+Blue - #edf7ff
+Yellow - #fffcda
+
+*/
+
+
+/* ---------- LAYOUT STYLES ---------- */
+
+html 
+	{
+	min-height: 100%;
+	}
+	
+body
+	{
+	background: #705c6c url("images/fp_gradient_bg_04.jpg") repeat left top;
+    color: #000;
+    font-family: Georgia, Times New Roman, serif;
+    font-size: 13px;
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+	padding: 0;
+	}
+	
+
+.triangle_container
+	{
+	background: url('images/fp_triangles_bg.png') center 50px no-repeat fixed;
+	position: relative;
+	margin: 0 auto;
+	height: 100%;
+	padding: 0;
+	}
+	
+.site_container
+	{
+	background: none repeat scroll center top #000;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0;
+    width: 800px;
+    }
+    
+.header
+	{
+	background: none repeat scroll center top #000;
+    height: 90px;
+    padding: 30px;
+    width: 740px;
+    }
+    
+.content
+	{
+	background: none repeat scroll center top #fff;
+    padding: 30px;
+    width: 740px;
+    }
+    
+.submit
+	{
+	background: none repeat scroll center top #fffcda;
+    padding: 10px;
+    width: 720px;
+    border: 30px solid #fff;
+    }
+    
+.ad_row
+	{
+	background: none repeat scroll center top #fff;
+    padding: 30px;
+    width: 740px;
+    }
+	
+.footer
+	{
+	background: none repeat scroll center top #000;
+    padding: 30px;
+    width: 740px;
+    }
+	
+	
+/* ---------- FONT STYLES ---------- */
+
+@font-face {
+    font-family: 'SteelfishRegular';
+    src: url('fonts/steelfish_rg-webfont.eot');
+    src: url('fonts/steelfish_rg-webfont.eot?iefix') format('eot'),
+         url('fonts/steelfish_rg-webfont.woff') format('woff'),
+         url('fonts/steelfish_rg-webfont.ttf') format('truetype'),
+         url('fonts/steelfish_rg-webfont.svg#webfontg6LIwiL9') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'JosefinSlabLight';
+    src: url('fonts/JosefinSlab-Light-webfont.eot');
+    src: url('fonts/JosefinSlab-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/JosefinSlab-Light-webfont.woff') format('woff'),
+         url('fonts/JosefinSlab-Light-webfont.ttf') format('truetype'),
+         url('fonts/JosefinSlab-Light-webfont.svg#JosefinSlabLight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1
+	{
+	font: 50px/50px 'SteelfishRegular', Arial, sans-serif;
+	color: #636363;
+	text-transform: uppercase;
+	}
+	
+h2
+	{
+	font: 50px/50px 'JosefinSlabLight', Georgia, sans-serif;
+	color: #636363;
+	text-transform: uppercase;
+	}
+	
+.copy
+	{
+	font: 13px/16px Georgia, Times New Roman, serif;
+	color: #636363;
+	}
+	
