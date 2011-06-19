@@ -17,7 +17,7 @@ html
 	
 body
 	{
-	background: #705c6c url("../../img/fp_gradient_bg_04.jpg") repeat left top;
+	background: #705c6c url("../img/fp_gradient_bg_04.jpg") repeat left top;
     color: $default-copy;
     font-family: Georgia, Times New Roman, serif;
     font-size: 13px;
@@ -30,7 +30,7 @@ body
 
 .triangle_container
 	{
-	background: url('../../img/fp_triangles_bg.png') center 50px no-repeat fixed;
+	background: url('../img/fp_triangles_bg.png') center 50px no-repeat fixed;
 	position: relative;
 	margin: 0 auto;
 	min-height: 100%;
