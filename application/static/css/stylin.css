@@ -1,138 +1,128 @@
-/* COLORS 
+/*
+I like to put here my font face declarations. I also like to define 4 mixins:
 
-Grey - #636363
-Green - #6aac10
-Red - #da2f30
-Blue - #edf7ff
-Yellow - #fffcda
-
+ff-text 		: The default font to display regular text
+ff-heading 		: The default font to display heading text
+ff-decorative 	: The default font to display decorative text
+ff-mono			: The default font to display code (monospaced)
 */
+@font-face {
+  font-family: "SteelfishRegular";
+  src: url('/../static/css/fonts/../../fonts/steelfish_rg-webfont.ttf') format('truetype'), url('/../static/css/fonts/../../fonts/steelfish_rg-webfont.woff') format('woff'), url('/../static/css/fonts/../../fonts/steelfish_rg-webfont.eot?iefix') format('eot');
+}
 
+@font-face {
+  font-family: 'JosefinSlabLight';
+  src: url("../../fonts/JosefinSlab-Light-webfont.eot");
+  src: url("../../fonts/JosefinSlab-Light-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/JosefinSlab-Light-webfont.woff") format("woff"), url("../../fonts/JosefinSlab-Light-webfont.ttf") format("truetype"), url("../../fonts/JosefinSlab-Light-webfont.svg#JosefinSlabLight") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
 
+/* ---------- COLOR VARIABLES ---------- */
 /* ---------- LAYOUT STYLES ---------- */
+/* line 14, ../../compass/sass/stylin.scss */
+html {
+  min-height: 100%;
+}
 
-html 
-	{
-	min-height: 100%;
-	}
-	
-body
-	{
-	background: #705c6c url("../img/fp_gradient_bg_04.jpg") repeat left top;
-    color: #000;
-    font-family: Georgia, Times New Roman, serif;
-    font-size: 13px;
-    width: 100%;
-    min-height: 100%;
-    margin: 0;
-	padding: 0;
-	}
-	
+/* line 19, ../../compass/sass/stylin.scss */
+body {
+  background: #705c6c url("../../img/fp_gradient_bg_04.jpg") repeat left top;
+  color: #636363;
+  font-family: Georgia, Times New Roman, serif;
+  font-size: 13px;
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
 
-.triangle_container
-	{
-	background: url('../img/fp_triangles_bg.png') center 50px no-repeat fixed;
-	position: relative;
-	margin: 0 auto;
-	height: 100%;
-	padding: 0;
-	}
-	
-.site_container
-	{
-	background: none repeat scroll center top #000;
-    height: 100%;
-    margin: 0 auto;
-    padding: 0;
-    width: 800px;
-    }
-    
-.header
-	{
-	background: none repeat scroll center top #000;
-    height: 90px;
-    padding: 30px;
-    width: 740px;
-    }
-    
-.content
-	{
-	background: none repeat scroll center top #fff;
-    padding: 30px;
-    width: 740px;
-    }
-    
-.submit
-	{
-	background: none repeat scroll center top #fffcda;
-    padding: 10px;
-    width: 720px;
-    border: 30px solid #fff;
-    }
-    
-.ad_row
-	{
-	background: none repeat scroll center top #fff;
-    padding: 30px;
-    width: 740px;
-    }
-	
-.footer
-	{
-	background: none repeat scroll center top #000;
-    padding: 30px;
-    width: 740px;
-    }
-	
-	
-.center
-	{
-	margin: 0 auto;
-	text-align: center;
-	}
-	
-/* ---------- FONT STYLES ---------- */
+/* line 32, ../../compass/sass/stylin.scss */
+.triangle_container {
+  background: url("../../img/fp_triangles_bg.png") center 50px no-repeat fixed;
+  position: relative;
+  margin: 0 auto;
+  min-height: 100%;
+  padding: 0;
+}
 
-@font-face {
-    font-family: 'SteelfishRegular';
-    src: url('../fonts/steelfish_rg-webfont.eot');
-    src: url('../fonts/steelfish_rg-webfont.eot?iefix') format('eot'),
-         url('../fonts/steelfish_rg-webfont.woff') format('woff'),
-         url('../fonts/steelfish_rg-webfont.ttf') format('truetype'),
-         url('../fonts/steelfish_rg-webfont.svg#webfontg6LIwiL9') format('svg');
-    font-weight: normal;
-    font-style: normal;
-	}
+/* line 41, ../../compass/sass/stylin.scss */
+.site_container {
+  background: #000;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0;
+  width: 800px;
+}
 
+/* line 50, ../../compass/sass/stylin.scss */
+.header {
+  background: #000;
+  height: 90px;
+  padding: 30px;
+  width: 740px;
+}
 
-@font-face {
-    font-family: 'JosefinSlabLight';
-    src: url('../fonts/JosefinSlab-Light-webfont.eot');
-    src: url('../fonts/JosefinSlab-Light-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/JosefinSlab-Light-webfont.woff') format('woff'),
-         url('../fonts/JosefinSlab-Light-webfont.ttf') format('truetype'),
-         url('../fonts/JosefinSlab-Light-webfont.svg#JosefinSlabLight') format('svg');
-    font-weight: normal;
-    font-style: normal;
-	}
+/* line 58, ../../compass/sass/stylin.scss */
+.content {
+  background: #fff;
+  padding: 0px;
+  margin: 0;
+  width: 800px;
+}
 
-h1
-	{
-	font: 50px/50px 'SteelfishRegular', Arial, sans-serif;
-	color: #636363;
-	text-transform: uppercase;
-	}
-	
-h2
-	{
-	font: 50px/50px 'JosefinSlabLight', Georgia, sans-serif;
-	color: #636363;
-	text-transform: uppercase;
-	}
-	
-.copy
-	{
-	font: 13px/16px Georgia, Times New Roman, serif;
-	color: #636363;
-	}
-	
+/* line 66, ../../compass/sass/stylin.scss */
+.submit {
+  background: #fffcda;
+  padding: 10px;
+  width: 720px;
+  border: 30px solid #fff;
+  margin: 0;
+}
+
+/* line 75, ../../compass/sass/stylin.scss */
+.ad_row {
+  background: #fff;
+  padding: 30px;
+  width: 740px;
+}
+
+/* line 82, ../../compass/sass/stylin.scss */
+.footer {
+  background: #000;
+  padding: 30px;
+  width: 740px;
+}
+
+/* line 90, ../../compass/sass/stylin.scss */
+.center {
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* line 96, ../../compass/sass/stylin.scss */
+p {
+  padding: 10px;
+  margin: 0;
+}
+
+/* line 103, ../../compass/sass/stylin.scss */
+h1 {
+  font: 50px/50px "SteelfishRegular", Arial, sans-serif;
+  color: #636363;
+  text-transform: uppercase;
+}
+
+/* line 105, ../../compass/sass/stylin.scss */
+h2 {
+  font: 50px/50px "JosefinSlabLight", Georgia, sans-serif;
+  color: #636363;
+  text-transform: uppercase;
+}
+
+/* line 107, ../../compass/sass/stylin.scss */
+.copy {
+  font: 13px/16px Georgia, Times New Roman, serif;
+  color: #636363;
+}
