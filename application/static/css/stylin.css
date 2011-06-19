@@ -8,13 +8,13 @@ ff-mono			: The default font to display code (monospaced)
 */
 @font-face {
   font-family: "SteelfishRegular";
-  src: url('/../static/css/fonts/../../fonts/steelfish_rg-webfont.ttf') format('truetype'), url('/../static/css/fonts/../../fonts/steelfish_rg-webfont.woff') format('woff'), url('/../static/css/fonts/../../fonts/steelfish_rg-webfont.eot?iefix') format('eot');
+  src: url('/../static/css/fonts/../fonts/steelfish_rg-webfont.ttf') format('truetype'), url('/../static/css/fonts/../fonts/steelfish_rg-webfont.woff') format('woff'), url('/../static/css/fonts/../fonts/steelfish_rg-webfont.eot?iefix') format('eot');
 }
 
 @font-face {
   font-family: 'JosefinSlabLight';
-  src: url("../../fonts/JosefinSlab-Light-webfont.eot");
-  src: url("../../fonts/JosefinSlab-Light-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/JosefinSlab-Light-webfont.woff") format("woff"), url("../../fonts/JosefinSlab-Light-webfont.ttf") format("truetype"), url("../../fonts/JosefinSlab-Light-webfont.svg#JosefinSlabLight") format("svg");
+  src: url("../fonts/JosefinSlab-Light-webfont.eot");
+  src: url("../fonts/JosefinSlab-Light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/JosefinSlab-Light-webfont.woff") format("woff"), url("../fonts/JosefinSlab-Light-webfont.ttf") format("truetype"), url("../fonts/JosefinSlab-Light-webfont.svg#JosefinSlabLight") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -28,7 +28,7 @@ html {
 
 /* line 19, ../../compass/sass/stylin.scss */
 body {
-  background: #705c6c url("../../img/fp_gradient_bg_04.jpg") repeat left top;
+  background: #705c6c url("../img/fp_gradient_bg_04.jpg") repeat left top;
   color: #636363;
   font-family: Georgia, Times New Roman, serif;
   font-size: 13px;
@@ -40,7 +40,7 @@ body {
 
 /* line 32, ../../compass/sass/stylin.scss */
 .triangle_container {
-  background: url("../../img/fp_triangles_bg.png") center 50px no-repeat fixed;
+  background: url("../img/fp_triangles_bg.png") center 50px no-repeat fixed;
   position: relative;
   margin: 0 auto;
   min-height: 100%;
