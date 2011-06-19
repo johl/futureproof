@@ -1,0 +1,107 @@
+@import "partials/fonts";
+
+/* ---------- COLOR VARIABLES ---------- */
+
+$default-copy: #636363; 
+$yes-color: #6aac10;
+$no-color: #da2f30;
+$info-box: #edf7ff;
+$form-box: #fffcda;
+
+/* ---------- LAYOUT STYLES ---------- */
+
+html 
+	{
+	min-height: 100%;
+	}
+	
+body
+	{
+	background: #705c6c url("../../img/fp_gradient_bg_04.jpg") repeat left top;
+    color: $default-copy;
+    font-family: Georgia, Times New Roman, serif;
+    font-size: 13px;
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+	padding: 0;
+	}
+	
+
+.triangle_container
+	{
+	background: url('../../img/fp_triangles_bg.png') center 50px no-repeat fixed;
+	position: relative;
+	margin: 0 auto;
+	min-height: 100%;
+	padding: 0;
+	}
+	
+.site_container
+	{
+	background: #000;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0;
+    width: 800px;
+    }
+    
+.header
+	{
+	background: #000;
+    height: 90px;
+    padding: 30px;
+    width: 740px;
+    }
+    
+.content
+	{
+	background: #fff;
+    padding: 0px;
+	margin: 0;
+    width: 800px;
+    }
+    
+.submit
+	{
+	background: $form-box;
+    padding: 10px;
+    width: 720px;
+    border: 30px solid #fff;
+	margin: 0;
+    }
+    
+.ad_row
+	{
+	background: #fff;
+    padding: 30px;
+    width: 740px;
+    }
+	
+.footer
+	{
+	background: #000;
+    padding: 30px;
+    width: 740px;
+    }
+	
+	
+.center
+	{
+	margin: 0 auto;
+	text-align: center;
+	}
+	
+p
+	{
+		padding: 10px;
+		margin: 0;
+	}
+	
+
+
+h1{ @include ff-heading; }
+
+h2{ @include ff-decorative; }
+
+.copy{ @include ff-text; }

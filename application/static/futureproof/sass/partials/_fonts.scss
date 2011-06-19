@@ -1,0 +1,44 @@
+/*
+I like to put here my font face declarations. I also like to define 4 mixins:
+
+ff-text 		: The default font to display regular text
+ff-heading 		: The default font to display heading text
+ff-decorative 	: The default font to display decorative text
+ff-mono			: The default font to display code (monospaced)
+*/
+@import "compass/css3/font-face";
+
+@include font-face("SteelfishRegular", font-files("../../fonts/steelfish_rg-webfont.ttf", truetype, "../../fonts/steelfish_rg-webfont.woff", woff, "../../fonts/steelfish_rg-webfont.eot?iefix", eot));
+
+
+
+@font-face {
+    font-family: 'JosefinSlabLight';
+    src: url('../../fonts/JosefinSlab-Light-webfont.eot');
+    src: url('../../fonts/JosefinSlab-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../../fonts/JosefinSlab-Light-webfont.woff') format('woff'),
+         url('../../fonts/JosefinSlab-Light-webfont.ttf') format('truetype'),
+         url('../../fonts/JosefinSlab-Light-webfont.svg#JosefinSlabLight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+	}
+
+@mixin ff-text{
+	font: 13px/16px Georgia, Times New Roman, serif;
+	color: $default-copy;
+}
+@mixin ff-heading{
+	font: 50px/50px "SteelfishRegular", Arial, sans-serif;
+	color: $default-copy;
+	text-transform: uppercase;
+}
+@mixin ff-decorative{
+	font: 50px/50px 'JosefinSlabLight', Georgia, sans-serif;
+	color: $default-copy;
+	text-transform: uppercase;
+}
+@mixin ff-mono{
+	font-family: monospace;
+}
+
+	
