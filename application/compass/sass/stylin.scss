@@ -1,4 +1,9 @@
 @import "partials/fonts";
+@import "compass/css3/border-radius";
+
+$icon-sprite-dimensions: true;
+@import "icon/*.png";
+@include all-icon-sprites;
 
 /* ---------- COLOR VARIABLES ---------- */
 
@@ -7,6 +12,7 @@ $yes-color: #6aac10;
 $no-color: #da2f30;
 $info-box: #edf7ff;
 $form-box: #fffcda;
+$link: #00aeef;
 
 /* ---------- LAYOUT STYLES ---------- */
 
@@ -19,8 +25,7 @@ body
 	{
 	background: #705c6c url("../img/fp_gradient_bg_04.jpg") repeat left top;
     color: $default-copy;
-    font-family: Georgia, Times New Roman, serif;
-    font-size: 13px;
+    font: 13px/18px Georgia, Times New Roman, serif;
     width: 100%;
     min-height: 100%;
     margin: 0;
@@ -40,35 +45,37 @@ body
 .site_container
 	{
 	background: #000;
-    height: 100%;
-    margin: 0 auto;
-    padding: 0;
-    width: 800px;
-    }
+  height: 100%;
+  margin: 0 auto;
+  padding: 0;
+  width: 800px;
+  }
     
 .header
 	{
 	background: #000;
-    height: 90px;
-    padding: 30px;
-    width: 740px;
-    }
+  height: 90px;
+  padding: 30px;
+  width: 740px;
+  text-align: center;
+  }
     
 .content
 	{
 	background: #fff;
-    padding: 0px;
+  padding: 10px 0px;
 	margin: 0;
-    width: 800px;
-    }
+  width: 800px;
+  }
     
 .submit
 	{
 	background: $form-box;
-    padding: 10px;
-    width: 720px;
-    border: 30px solid #fff;
+  padding: 10px;
+  width: 720px;
+  border: 30px solid #fff;
 	margin: 0;
+	text-align: center;
     }
     
 .ad_row
@@ -76,6 +83,7 @@ body
 	background: #fff;
     padding: 30px;
     width: 740px;
+@include border-radius(25px);
     }
 	
 .footer
@@ -85,23 +93,55 @@ body
     width: 740px;
     }
 	
-	
 .center
 	{
 	margin: 0 auto;
 	text-align: center;
+	padding: 0;
+	.share{
+	  width: 65%;
+	  margin: 0 auto;
+	  }
+	.leader-link{
+	  width: 35%;
+	  margin: 0 auto;
+	  }
+	  ul { list-style-type: none; 
+		}
+	  li {
+	    float: left;
+		  margin: 8px;
+		  border: 1px solid green;
+	    }
+	    p {
+	      padding:0;
+	      margin:0;
+	    }
 	}
 	
-p
-	{
-		padding: 10px;
-		margin: 0;
-	}
+.info
+  	{
+  	background: $info-box;
+    padding: 10px;
+    width: 720px;
+    border: 30px solid #fff;
+  	margin: 0;
+    }
+      
+.leaderboard-tease
+  {
+  clear:both;
+  }
+
 	
+h1{ @include ff-josefin; 
+	font-size:50px;
+  }
 
+h2{ @include ff-steelfish;
+	font-size:50px;
+	line-height: 50px; }
+	
+h3{ @include subhead; }
 
-h1{ @include ff-heading; }
-
-h2{ @include ff-decorative; }
-
-.copy{ @include ff-text; }
+.caption{ @include caption; }

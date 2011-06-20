@@ -1,43 +1,48 @@
-/*
-I like to put here my font face declarations. I also like to define 4 mixins:
-
-ff-text 		: The default font to display regular text
-ff-heading 		: The default font to display heading text
-ff-decorative 	: The default font to display decorative text
-ff-mono			: The default font to display code (monospaced)
-*/
 @import "compass/css3/font-face";
 
-@include font-face("SteelfishRegular", font-files("steelfish_rg-webfont.ttf", truetype, "steelfish_rg-webfont.woff", woff, "steelfish_rg-webfont.eot?iefix", eot));
+@include font-face("SteelfishRegular", font-files("steelfish_rg-webfont.ttf", truetype, "steelfish_rg-webfont.woff", woff, "steelfish_eb-webfont.eot", eot, "steelfish_rg-webfont.eot?iefix", eot, "steelfish_eb-webfont.svg#webfont9KBGdVpU", svg));
+
+@include font-face("JosefinSlabLight", font-files("JosefinSlabLight.ttf", truetype, "JosefinSlabLight.woff", woff, "JosefinSlab-Thin-webfont.eot", eot, "JosefinSlabLight.eot?iefix", embedded-opentype, "JosefinSlab-Thin-webfont.svg#JosefinSlabThin", svg));
 
 
+@mixin caption{
+	font: 13px/18px Georgia, Times New Roman, serif;
+	color: #000;
+	font-style: italic;
+	&:hover { color: $link;  }
+}
 
-@font-face {
-    font-family: 'JosefinSlabLight';
-    src: url('JosefinSlab-Light-webfont.eot');
-    src: url('JosefinSlab-Light-webfont.eot?#iefix') format('embedded-opentype'),
-         url('JosefinSlab-Light-webfont.woff') format('woff'),
-         url('JosefinSlab-Light-webfont.ttf') format('truetype'),
-         url('JosefinSlab-Light-webfont.svg#JosefinSlabLight') format('svg');
-    font-weight: normal;
+@mixin subhead{
+	font: 24px/28px Georgia, Times New Roman, serif;
+	color: #000;
+	margin: 0;
+	padding: 0;
+}
+
+span.first
+{
+ float: left;
+ font-family: "JosefinSlabLight", Georgia, sans-serif;
+ font-size: 450%;
+ line-height: 30px;
+ margin: 10px 10px 5px 5px;
+}
+
+@mixin ff-steelfish{
+	font-family: "SteelfishRegular", Arial, sans-serif;
+	color: $default-copy;
+	text-transform: uppercase;
+	font-weight: normal;
     font-style: normal;
-	}
-
-@mixin ff-text{
-	font: 13px/16px Georgia, Times New Roman, serif;
-	color: $default-copy;
 }
-@mixin ff-heading{
-	font: 50px/50px "SteelfishRegular", Arial, sans-serif;
+@mixin ff-josefin{
+	font-family: "JosefinSlabLight", Georgia, sans-serif;
 	color: $default-copy;
 	text-transform: uppercase;
+	font-weight: normal;
+    font-style: normal;
 }
-@mixin ff-decorative{
-	font: 50px/50px 'JosefinSlabLight', Georgia, sans-serif;
-	color: $default-copy;
-	text-transform: uppercase;
-}
-@mixin ff-mono{
+@mixin mono{
 	font-family: monospace;
 }
 
