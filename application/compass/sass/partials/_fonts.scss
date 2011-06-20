@@ -17,6 +17,7 @@
 	color: #000;
 	margin: 0;
 	padding: 0;
+	text-transform: none;
 }
 
 span.first
@@ -30,10 +31,9 @@ span.first
 
 @mixin ff-steelfish{
 	font-family: "SteelfishRegular", Arial, sans-serif;
-	color: $default-copy;
-	text-transform: uppercase;
+	color: #fff;
 	font-weight: normal;
-    font-style: normal;
+  font-style: normal;
 }
 @mixin ff-josefin{
 	font-family: "JosefinSlabLight", Georgia, sans-serif;
