@@ -5,7 +5,7 @@
 
 @font-face {
   font-family: "JosefinSlabLight";
-  src: url('/static/fonts/JosefinSlabLight.ttf') format('truetype'), url('/static/fonts/JosefinSlabLight.woff') format('woff'), url('/static/fonts/JosefinSlab-Thin-webfont.eot') format('eot'), url('/static/fonts/JosefinSlabLight.eot?iefix') format('embedded-opentype'), url('/static/fonts/JosefinSlab-Thin-webfont.svg#JosefinSlabThin') format('svg');
+  src: url('/static/fonts/JosefinSlab-Light-webfont.ttf') format('truetype'), url('/static/fonts/JosefinSlab-Light-webfont.woff') format('woff'), url('/static/fonts/JosefinSlab-Light-webfont-webfont.eot') format('eot'), url('/static/fonts/JosefinSlab-Light-webfont.eot?iefix') format('embedded-opentype'), url('/static/fonts/JosefinSlab-Light-webfont.svg#JosefinSlabThin') format('svg');
 }
 
 /* line 24, ../../sass/partials/_fonts.scss */

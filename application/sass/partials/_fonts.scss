@@ -2,7 +2,7 @@
 
 @include font-face("SteelfishRegular", font-files("steelfish_rg-webfont.ttf", truetype, "steelfish_rg-webfont.woff", woff, "steelfish_eb-webfont.eot", eot, "steelfish_rg-webfont.eot?iefix", eot, "steelfish_eb-webfont.svg#webfont9KBGdVpU", svg));
 
-@include font-face("JosefinSlabLight", font-files("JosefinSlabLight.ttf", truetype, "JosefinSlabLight.woff", woff, "JosefinSlab-Thin-webfont.eot", eot, "JosefinSlabLight.eot?iefix", embedded-opentype, "JosefinSlab-Thin-webfont.svg#JosefinSlabThin", svg));
+@include font-face("JosefinSlabLight", font-files("JosefinSlab-Light-webfont.ttf", truetype, "JosefinSlab-Light-webfont.woff", woff, "JosefinSlab-Light-webfont-webfont.eot", eot, "JosefinSlab-Light-webfont.eot?iefix", embedded-opentype, "JosefinSlab-Light-webfont.svg#JosefinSlabThin", svg));
 
 
 @mixin caption{
