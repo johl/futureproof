@@ -9,7 +9,6 @@
 	font: 13px/18px Georgia, Times New Roman, serif;
 	color: #000;
 	font-style: italic;
-	&:hover { color: $link;  }
 }
 
 @mixin subhead{
@@ -26,7 +25,7 @@ span.first
  font-family: "JosefinSlabLight", Georgia, sans-serif;
  font-size: 450%;
  line-height: 30px;
- margin: 10px 10px 5px 5px;
+ margin: 17px 10px 5px 3px;
 }
 
 @mixin ff-steelfish{

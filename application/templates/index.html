@@ -14,11 +14,11 @@
 	
 	<body>
 	
-	<!-- begin #traingle_container -->
-	<div class="triangle_container">
+	<!-- begin #traingle-container -->
+	<div class="triangle-container">
 
-		<!-- begin #site_container -->
-		<div class="site_container">
+		<!-- begin #site-container -->
+		<div class="site-container">
 		
 		
 			<!-- begin #header -->
@@ -32,17 +32,13 @@
 			
 			<!-- begin #content -->
 			<div class="content">
-				<div class="question">
-				   <h1>Will we still <p class="carousel">borrow library books</p>in 20 years?</h1>
-				   <div class="center">
-				      <div class="yesno">
-				      <ul>
-                     <li><a href="#"><p class="yes_button">yes</p></a></li>
-                     <li><a href="#"><p class="no_button">no</p></a></li>
-                  </ul>
-               </div>
-               </div>
-            </div>
+
+   		   <h1>Will we still <p class="carousel">borrow library books</p>in 20 years?</h1>
+
+		      <ul>
+               <li><div class="yes-button"><a href="#">yes</a></div></li>
+               <li><div class="no-button"><a href="#">no</a></div></li>
+            </ul>
 
             <div class="info">
                <span class="first">T</span><strong>he world is changing.</strong> Lorem ipsum dolor sit amet, consectetur     
@@ -53,48 +49,55 @@
                      quis nisl mattis tempus in vitae nulla. Enjoy!
             </div>
 
-            <div class="center">
-               <div class="share">
-                  <ul>
-                     <li><p class="icon-fp_horz_line"></p></li>
-                     <li><h3 class="subhead">Dig it? <span class="caption">Then share it!</span></h3></li>
-                     <li><a href="#"><p class="icon-fp_twitter"></p></a></li>
-                     <li><a href="#"><p class="icon-fp_facebook"></p></a></li>
-                     <li><a href="#"><p class="icon-fp_email"></p></a></li>
-                     <li><p class="icon-fp_horz_line"></p></li>
-                  </ul>
-               </div>
-            </div>
+            <ul>
+               <li><p class="icon-fp_horz_line"></p></li>
+               <li><h3 class="subhead">Dig it? <span class="caption">Then share it!</span></h3></li>
+               <li><a href="#"><p class="icon-fp_twitter"></p></a></li>
+               <li><a href="#"><p class="icon-fp_facebook"></p></a></li>
+               <li><a href="#"><p class="icon-fp_email"></p></a></li>
+               <li class="fb-like">
+                     <div id="fb-root"></div>
+                     <script src="http://connect.facebook.net/en_US/all.js#appId=113139628777594&amp;xfbml=1"></script>
+                     <fb:like href="" send="false" layout="button_count" width="75" show_faces="false" font=""></fb:like>
+               </li>
+               <li><p class="icon-fp_horz_line"></p></li>
+            </ul>
 
             <div class="leaderboard-tease">
             </div>
 
-            <div class="center">
-               <div class="leader-link">
-                  <ul>
-                     <li><p class="icon-fp_horz_line_short"></p></li>
-                     <li><a href="#"><p class="caption">View all.</p></a></li>
-                     <li><a href="#"><p class="icon-fp_arrow"></p></a></li>
-                     <li><p class="icon-fp_horz_line_short"></p></li>
-                  </ul>
-               </div>
-            </div>
+            <ul>
+               <li><p class="icon-fp_horz_line_short"></p></li>
+               <li><a href="#"><p class="caption">View all.</p></a></li>
+               <li><a href="#"><p class="icon-fp_arrow"></p></a></li>
+               <li><p class="icon-fp_horz_line_short"></p></li>
+            </ul>
 			</div>
 			<!-- end #content -->
 			
 			
 			<!-- begin #submit -->
 			<div class="submit">
-				<h1>i'm the submit box</h1>
+			   <form action="#" method="post">
+				<p class="submit-head">Got a good one?</p>
+				<p class="caption">Great! Just fill in the blank:</p>
+				<h3>Will we still <input class="entry-form" type="text" name="entry" id="entry" value="" tabindex="1" />in 20 years?</h3>
+
+			      <ul>
+                  <li><input class="yes-button-small" type="submit" value="yes" /></li>
+                  <li><input class="no-button-small" type="submit" value="no" /></li>
+               </ul>
+
+            </form>
 			</div>
 			<!-- end #submit -->
 			
 			
-			<!-- begin #ad_row -->
-			<div class="ad_row">
-				<div class="center">moof<br /><br /><img src="../static/img/fp_fake_ads.jpg" /></div>
+			<!-- begin #ad-row -->
+			<div class="ad-row">
+				<img src="../static/img/fp_fake_ads.jpg" />
 			</div>
-			<!-- end #ad_row --> 
+			<!-- end #ad-row --> 
 			
 			
 			<!-- begin #footer -->
@@ -105,9 +108,9 @@
 			<!-- end #footer -->
 			
 		</div>
-		<!-- end #site_container -->
+		<!-- end #site-container -->
 	</div>
-	<!-- end #triangle_container -->
+	<!-- end #triangle-container -->
 	
 	
 	
