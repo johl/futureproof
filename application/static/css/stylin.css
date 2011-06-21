@@ -1,14 +1,14 @@
 @font-face {
   font-family: "SteelfishRegular";
-  src: url('/../static/css/fonts/steelfish_rg-webfont.ttf') format('truetype'), url('/../static/css/fonts/steelfish_rg-webfont.woff') format('woff'), url('/../static/css/fonts/steelfish_eb-webfont.eot') format('eot'), url('/../static/css/fonts/steelfish_rg-webfont.eot?iefix') format('eot'), url('/../static/css/fonts/steelfish_eb-webfont.svg#webfont9KBGdVpU') format('svg');
+  src: url('//static/fonts/steelfish_rg-webfont.ttf') format('truetype'), url('//static/fonts/steelfish_rg-webfont.woff') format('woff'), url('//static/fonts/steelfish_eb-webfont.eot') format('eot'), url('//static/fonts/steelfish_rg-webfont.eot?iefix') format('eot'), url('//static/fonts/steelfish_eb-webfont.svg#webfont9KBGdVpU') format('svg');
 }
 
 @font-face {
   font-family: "JosefinSlabLight";
-  src: url('/../static/css/fonts/JosefinSlabLight.ttf') format('truetype'), url('/../static/css/fonts/JosefinSlabLight.woff') format('woff'), url('/../static/css/fonts/JosefinSlab-Thin-webfont.eot') format('eot'), url('/../static/css/fonts/JosefinSlabLight.eot?iefix') format('embedded-opentype'), url('/../static/css/fonts/JosefinSlab-Thin-webfont.svg#JosefinSlabThin') format('svg');
+  src: url('//static/fonts/JosefinSlabLight.ttf') format('truetype'), url('//static/fonts/JosefinSlabLight.woff') format('woff'), url('//static/fonts/JosefinSlab-Thin-webfont.eot') format('eot'), url('//static/fonts/JosefinSlabLight.eot?iefix') format('embedded-opentype'), url('//static/fonts/JosefinSlab-Thin-webfont.svg#JosefinSlabThin') format('svg');
 }
 
-/* line 24, ../../compass/sass/partials/_fonts.scss */
+/* line 24, ../../sass/partials/_fonts.scss */
 span.first {
   float: left;
   font-family: "JosefinSlabLight", Georgia, sans-serif;
@@ -17,99 +17,16 @@ span.first {
   margin: 10px 10px 5px 5px;
 }
 
-/* line 93, icon */
-.icon-sprite, .icon-fp_android, .icon-fp_apple, .icon-fp_arrow, .icon-fp_comment, .icon-fp_email, .icon-fp_facebook, .icon-fp_horz_line, .icon-fp_horz_line_short, .icon-fp_line_vert, .icon-fp_twitter {
-  background: url('/../static/img/icon-s87bc14db46.png') no-repeat;
-}
-
-/* line 60, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.3/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
-.icon-fp_android {
-  background-position: 0 0;
-  height: 29px;
-  width: 25px;
-}
-
-/* line 60, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.3/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
-.icon-fp_apple {
-  background-position: 0 -29px;
-  height: 30px;
-  width: 24px;
-}
-
-/* line 60, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.3/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
-.icon-fp_arrow {
-  background-position: 0 -59px;
-  height: 16px;
-  width: 16px;
-}
-/* line 43, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.3/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
-.icon-fp_arrow:hover, .icon-fp_arrow.fp_arrow_hover, .icon-fp_arrow.fp_arrow-hover {
-  background-position: 0 -75px;
-}
-
-/* line 60, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.3/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
-.icon-fp_comment {
-  background-position: 0 -91px;
-  height: 14px;
-  width: 15px;
-}
-/* line 43, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.3/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
-.icon-fp_comment:hover, .icon-fp_comment.fp_comment_hover, .icon-fp_comment.fp_comment-hover {
-  background-position: 0 -105px;
-}
-
-/* line 60, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.3/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
-.icon-fp_email {
-  background-position: 0 -119px;
-  height: 34px;
-  width: 36px;
-}
-
-/* line 60, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.3/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
-.icon-fp_facebook {
-  background-position: 0 -153px;
-  height: 34px;
-  width: 33px;
-}
-
-/* line 60, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.3/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
-.icon-fp_horz_line {
-  background-position: 0 -187px;
-  height: 34px;
-  width: 41px;
-}
-
-/* line 60, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.3/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
-.icon-fp_horz_line_short {
-  background-position: 0 -221px;
-  height: 15px;
-  width: 41px;
-}
-
-/* line 60, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.3/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
-.icon-fp_line_vert {
-  background-position: 0 -236px;
-  height: 37px;
-  width: 26px;
-}
-
-/* line 60, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.3/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
-.icon-fp_twitter {
-  background-position: 0 -273px;
-  height: 34px;
-  width: 33px;
-}
-
 /* ---------- COLOR VARIABLES ---------- */
 /* ---------- LAYOUT STYLES ---------- */
-/* line 20, ../../compass/sass/stylin.scss */
+/* line 20, ../../sass/stylin.scss */
 html {
   min-height: 100%;
 }
 
-/* line 25, ../../compass/sass/stylin.scss */
+/* line 25, ../../sass/stylin.scss */
 body {
-  background: #705c6c url("../img/fp_gradient_bg_04.jpg") repeat left top;
+  background: #705c6c url("/static/img/fp_gradient_bg_04.jpg") repeat left top;
   color: #636363;
   font: 13px/18px Georgia, Times New Roman, serif;
   width: 100%;
@@ -118,16 +35,16 @@ body {
   padding: 0;
 }
 
-/* line 37, ../../compass/sass/stylin.scss */
+/* line 37, ../../sass/stylin.scss */
 .triangle_container {
-  background: url("../img/fp_triangles_bg.png") center 50px no-repeat fixed;
+  background: url("/static/img/fp_triangles_bg.png") center 50px no-repeat fixed;
   position: relative;
   margin: 0 auto;
   min-height: 100%;
   padding: 0;
 }
 
-/* line 46, ../../compass/sass/stylin.scss */
+/* line 46, ../../sass/stylin.scss */
 .site_container {
   background: #000;
   height: 100%;
@@ -136,7 +53,7 @@ body {
   width: 800px;
 }
 
-/* line 55, ../../compass/sass/stylin.scss */
+/* line 55, ../../sass/stylin.scss */
 .header {
   background: #000;
   height: 90px;
@@ -145,7 +62,7 @@ body {
   text-align: center;
 }
 
-/* line 64, ../../compass/sass/stylin.scss */
+/* line 64, ../../sass/stylin.scss */
 .content {
   background: #fff;
   padding: 10px 0px;
@@ -153,7 +70,7 @@ body {
   width: 800px;
 }
 
-/* line 72, ../../compass/sass/stylin.scss */
+/* line 72, ../../sass/stylin.scss */
 .submit {
   background: #fffcda;
   padding: 10px;
@@ -163,7 +80,7 @@ body {
   text-align: center;
 }
 
-/* line 82, ../../compass/sass/stylin.scss */
+/* line 82, ../../sass/stylin.scss */
 .ad_row {
   background: #fff;
   padding: 30px;
@@ -176,51 +93,51 @@ body {
   border-radius: 25px;
 }
 
-/* line 90, ../../compass/sass/stylin.scss */
+/* line 90, ../../sass/stylin.scss */
 .footer {
   background: #000;
   padding: 30px;
   width: 740px;
 }
 
-/* line 97, ../../compass/sass/stylin.scss */
+/* line 97, ../../sass/stylin.scss */
 .center {
   margin: 0 auto;
   text-align: center;
   padding: 0;
 }
-/* line 101, ../../compass/sass/stylin.scss */
+/* line 101, ../../sass/stylin.scss */
 .center .yesno {
   width: 40%;
   margin: 0 auto;
 }
-/* line 105, ../../compass/sass/stylin.scss */
+/* line 105, ../../sass/stylin.scss */
 .center .share {
   width: 65%;
   margin: 0 auto;
 }
-/* line 109, ../../compass/sass/stylin.scss */
+/* line 109, ../../sass/stylin.scss */
 .center .leader-link {
   width: 35%;
   margin: 0 auto;
 }
-/* line 113, ../../compass/sass/stylin.scss */
+/* line 113, ../../sass/stylin.scss */
 .center ul {
   list-style-type: none;
 }
-/* line 115, ../../compass/sass/stylin.scss */
+/* line 115, ../../sass/stylin.scss */
 .center li {
   float: left;
   margin: 8px;
   border: 1px solid green;
 }
-/* line 120, ../../compass/sass/stylin.scss */
+/* line 120, ../../sass/stylin.scss */
 .center p {
   padding: 0;
   margin: 0;
 }
 
-/* line 127, ../../compass/sass/stylin.scss */
+/* line 127, ../../sass/stylin.scss */
 .question {
   padding: 50px 80px 80px 80px;
   text-align: center;
@@ -228,7 +145,7 @@ body {
   margin: 0 auto;
 }
 
-/* line 134, ../../compass/sass/stylin.scss */
+/* line 134, ../../sass/stylin.scss */
 .info {
   background: #edf7ff;
   padding: 10px;
@@ -237,12 +154,12 @@ body {
   margin: 0;
 }
 
-/* line 143, ../../compass/sass/stylin.scss */
+/* line 143, ../../sass/stylin.scss */
 .leaderboard-tease {
   clear: both;
 }
 
-/* line 148, ../../compass/sass/stylin.scss */
+/* line 148, ../../sass/stylin.scss */
 h1 {
   font-family: "JosefinSlabLight", Georgia, sans-serif;
   color: #636363;
@@ -252,7 +169,7 @@ h1 {
   font-size: 50px;
 }
 
-/* line 152, ../../compass/sass/stylin.scss */
+/* line 152, ../../sass/stylin.scss */
 h2 {
   font-family: "SteelfishRegular", Arial, sans-serif;
   color: #fff;
@@ -262,7 +179,7 @@ h2 {
   line-height: 50px;
 }
 
-/* line 156, ../../compass/sass/stylin.scss */
+/* line 156, ../../sass/stylin.scss */
 h3 {
   font: 24px/28px Georgia, Times New Roman, serif;
   color: #000;
@@ -271,18 +188,18 @@ h3 {
   text-transform: none;
 }
 
-/* line 158, ../../compass/sass/stylin.scss */
+/* line 158, ../../sass/stylin.scss */
 .caption {
   font: 13px/18px Georgia, Times New Roman, serif;
   color: #000;
   font-style: italic;
 }
-/* line 12, ../../compass/sass/partials/_fonts.scss */
+/* line 12, ../../sass/partials/_fonts.scss */
 .caption:hover {
   color: #00aeef;
 }
 
-/* line 161, ../../compass/sass/stylin.scss */
+/* line 161, ../../sass/stylin.scss */
 .carousel {
   font: 24px/28px Georgia, Times New Roman, serif;
   color: #000;
@@ -296,7 +213,7 @@ h3 {
   margin: 40px;
 }
 
-/* line 172, ../../compass/sass/stylin.scss */
+/* line 172, ../../sass/stylin.scss */
 .yes_button {
   font-family: "SteelfishRegular", Arial, sans-serif;
   color: #fff;
@@ -315,12 +232,12 @@ h3 {
   -khtml-border-radius: 30px;
   border-radius: 30px;
 }
-/* line 181, ../../compass/sass/stylin.scss */
+/* line 181, ../../sass/stylin.scss */
 .yes_button:hover {
   background: #00aeef;
 }
 
-/* line 185, ../../compass/sass/stylin.scss */
+/* line 185, ../../sass/stylin.scss */
 .no_button {
   font-family: "SteelfishRegular", Arial, sans-serif;
   color: #fff;
@@ -339,7 +256,7 @@ h3 {
   -khtml-border-radius: 30px;
   border-radius: 30px;
 }
-/* line 194, ../../compass/sass/stylin.scss */
+/* line 194, ../../sass/stylin.scss */
 .no_button:hover {
   background: #00aeef;
 }

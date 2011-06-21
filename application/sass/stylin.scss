@@ -2,8 +2,8 @@
 @import "compass/css3/border-radius";
 
 $icon-sprite-dimensions: true;
-@import "icon/*.png";
-@include all-icon-sprites;
+//@import "icon/*.png";
+//@include all-icon-sprites;
 
 /* ---------- COLOR VARIABLES ---------- */
 
@@ -23,7 +23,7 @@ html
 	
 body
 	{
-	background: #705c6c url("../img/fp_gradient_bg_04.jpg") repeat left top;
+	background: #705c6c url("/static/img/fp_gradient_bg_04.jpg") repeat left top;
     color: $default-copy;
     font: 13px/18px Georgia, Times New Roman, serif;
     width: 100%;
@@ -35,7 +35,7 @@ body
 
 .triangle_container
 	{
-	background: url('../img/fp_triangles_bg.png') center 50px no-repeat fixed;
+	background: url('/static/img/fp_triangles_bg.png') center 50px no-repeat fixed;
 	position: relative;
 	margin: 0 auto;
 	min-height: 100%;

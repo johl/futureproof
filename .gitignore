@@ -14,3 +14,4 @@ views.pyc
 urls.pyc
 /application/views.pyc
 /application/urls.pyc
+/application/.sass-cache/
