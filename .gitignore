@@ -14,4 +14,14 @@ views.pyc
 urls.pyc
 /application/views.pyc
 /application/urls.pyc
-/application/.sass-cache/
+/application/.sass-cache/pkg_resources.pyc
+secret_keys.pyc
+./application/__init__.pyc
+./application/decorators.pyc
+./application/forms.pyc
+./application/models.pyc
+./application/settings.pyc
+./application/urls.pyc
+./application/views.pyc
+./pkg_resources.pyc
+./secret_keys.pyc
