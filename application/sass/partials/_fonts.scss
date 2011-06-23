@@ -1,3 +1,5 @@
+$link: #00aeef;
+
 @import "compass/css3/font-face";
 
 @include font-face("SteelfishRegular", font-files("steelfish_rg-webfont.ttf", truetype, "steelfish_rg-webfont.woff", woff, "steelfish_eb-webfont.eot", eot, "steelfish_rg-webfont.eot?iefix", eot, "steelfish_eb-webfont.svg#webfont9KBGdVpU", svg));
@@ -5,7 +7,7 @@
 @include font-face("JosefinSlabLight", font-files("JosefinSlab-Light-webfont.ttf", truetype, "JosefinSlab-Light-webfont.woff", woff, "JosefinSlab-Light-webfont-webfont.eot", eot, "JosefinSlab-Light-webfont.eot?iefix", embedded-opentype, "JosefinSlab-Light-webfont.svg#JosefinSlabThin", svg));
 
 
-@mixin caption{
+.caption{
 	font: 13px/18px Georgia, Times New Roman, serif;
 	color: #000;
 	font-style: italic;
@@ -45,4 +47,15 @@ span.first
 	font-family: monospace;
 }
 
+@mixin footer_text{
+	font: Georgia, Times New Roman, serif;
+	color: #fff;
+	margin: 0;
+	padding: 0 0 8px 0;
+	a {
+	  color:$link;
+	  text-decoration: underline;
+	  &:hover {text-decoration: none;};
+	}
+}
 	

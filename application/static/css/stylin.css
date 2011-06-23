@@ -8,7 +8,14 @@
   src: url('/static/fonts/JosefinSlab-Light-webfont.ttf') format('truetype'), url('/static/fonts/JosefinSlab-Light-webfont.woff') format('woff'), url('/static/fonts/JosefinSlab-Light-webfont-webfont.eot') format('eot'), url('/static/fonts/JosefinSlab-Light-webfont.eot?iefix') format('embedded-opentype'), url('/static/fonts/JosefinSlab-Light-webfont.svg#JosefinSlabThin') format('svg');
 }
 
-/* line 23, ../../sass/partials/_fonts.scss */
+/* line 10, ../../sass/partials/_fonts.scss */
+.caption {
+  font: 13px/18px Georgia, Times New Roman, serif;
+  color: #000;
+  font-style: italic;
+}
+
+/* line 25, ../../sass/partials/_fonts.scss */
 span.first {
   float: left;
   font-family: "JosefinSlabLight", Georgia, sans-serif;
@@ -19,7 +26,7 @@ span.first {
 
 /* line 93, icon */
 .icon-sprite, .icon-fp_android, .icon-fp_apple, .icon-fp_arrow, .icon-fp_comment, .icon-fp_email, .icon-fp_facebook, .icon-fp_horz_line, .icon-fp_horz_line_short, .icon-fp_line_vert, .icon-fp_twitter {
-  background: url('/static/img/icon-s78a983c23c.png') no-repeat;
+  background: url('/static/img/icon-s2bbdd5cb7e.png') no-repeat;
 }
 
 /* line 60, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.3/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
@@ -130,7 +137,7 @@ body {
 /* line 46, ../../sass/stylin.scss */
 .site-container {
   background: #000;
-  height: 100%;
+  min-height: 100%;
   margin: 0 auto;
   padding: 0;
   width: 800px;
@@ -181,10 +188,18 @@ body {
 /* line 96, ../../sass/stylin.scss */
 .footer {
   background: #000;
-  padding: 30px;
+  padding: 20px 10px 85px 10px;
+}
+/* line 99, ../../sass/stylin.scss */
+.footer ul {
+  margin: 0;
+}
+/* line 101, ../../sass/stylin.scss */
+.footer ul li {
+  margin: 0 5px 0 5px;
 }
 
-/* line 102, ../../sass/stylin.scss */
+/* line 108, ../../sass/stylin.scss */
 ul {
   list-style-type: none;
   margin: 0 0 20px 0;
@@ -195,7 +210,7 @@ ul {
   clear: left;
   float: left;
 }
-/* line 111, ../../sass/stylin.scss */
+/* line 117, ../../sass/stylin.scss */
 ul li {
   position: relative;
   right: 50%;
@@ -203,19 +218,20 @@ ul li {
   float: left;
   margin: 5px;
   text-align: center;
+  padding: 0;
 }
-/* line 118, ../../sass/stylin.scss */
+/* line 125, ../../sass/stylin.scss */
 ul li p {
   padding: 0;
   margin: 0;
 }
 
-/* line 126, ../../sass/stylin.scss */
+/* line 133, ../../sass/stylin.scss */
 .fb-like {
   padding-top: 8px;
 }
 
-/* line 131, ../../sass/stylin.scss */
+/* line 138, ../../sass/stylin.scss */
 .info {
   background: #edf7ff;
   padding: 10px;
@@ -226,12 +242,12 @@ ul li p {
   clear: both;
 }
 
-/* line 142, ../../sass/stylin.scss */
+/* line 149, ../../sass/stylin.scss */
 .leaderboard-tease {
   clear: both;
 }
 
-/* line 147, ../../sass/stylin.scss */
+/* line 154, ../../sass/stylin.scss */
 h1 {
   font-family: "JosefinSlabLight", Georgia, sans-serif;
   color: #636363;
@@ -243,7 +259,7 @@ h1 {
   margin-bottom: 20px;
 }
 
-/* line 155, ../../sass/stylin.scss */
+/* line 162, ../../sass/stylin.scss */
 h2 {
   font-family: "SteelfishRegular", Arial, sans-serif;
   color: #fff;
@@ -253,7 +269,7 @@ h2 {
   line-height: 50px;
 }
 
-/* line 161, ../../sass/stylin.scss */
+/* line 168, ../../sass/stylin.scss */
 h3 {
   font: 24px/28px Georgia, Times New Roman, serif;
   color: #000;
@@ -262,14 +278,65 @@ h3 {
   text-transform: none;
 }
 
-/* line 163, ../../sass/stylin.scss */
-.caption {
-  font: 13px/18px Georgia, Times New Roman, serif;
-  color: #000;
-  font-style: italic;
+/* line 171, ../../sass/stylin.scss */
+.footer_head {
+  font: Georgia, Times New Roman, serif;
+  color: #fff;
+  margin: 0;
+  padding: 0 0 8px 0;
+  font-size: 18px;
+  text-align: left;
+}
+/* line 55, ../../sass/partials/_fonts.scss */
+.footer_head a {
+  color: #00aeef;
+  text-decoration: underline;
+}
+/* line 58, ../../sass/partials/_fonts.scss */
+.footer_head a:hover {
+  text-decoration: none;
 }
 
-/* line 166, ../../sass/stylin.scss */
+/* line 178, ../../sass/stylin.scss */
+.footer_email {
+  font: Georgia, Times New Roman, serif;
+  color: #fff;
+  margin: 0;
+  padding: 0 0 8px 0;
+  font-size: 14px;
+  font-style: italic;
+  text-align: left;
+}
+/* line 55, ../../sass/partials/_fonts.scss */
+.footer_email a {
+  color: #00aeef;
+  text-decoration: underline;
+}
+/* line 58, ../../sass/partials/_fonts.scss */
+.footer_email a:hover {
+  text-decoration: none;
+}
+
+/* line 186, ../../sass/stylin.scss */
+.footer_text {
+  font: Georgia, Times New Roman, serif;
+  color: #fff;
+  margin: 0;
+  padding: 0 0 8px 0;
+  font-size: 14px;
+  font-style: italic;
+}
+/* line 55, ../../sass/partials/_fonts.scss */
+.footer_text a {
+  color: #00aeef;
+  text-decoration: underline;
+}
+/* line 58, ../../sass/partials/_fonts.scss */
+.footer_text a:hover {
+  text-decoration: none;
+}
+
+/* line 194, ../../sass/stylin.scss */
 .submit-head {
   font-family: "JosefinSlabLight", Georgia, sans-serif;
   color: #636363;
@@ -279,7 +346,7 @@ h3 {
   font-size: 34px;
 }
 
-/* line 172, ../../sass/stylin.scss */
+/* line 200, ../../sass/stylin.scss */
 .carousel {
   font: 24px/28px Georgia, Times New Roman, serif;
   color: #000;
@@ -294,7 +361,7 @@ h3 {
   width: 600px;
 }
 
-/* line 183, ../../sass/stylin.scss */
+/* line 211, ../../sass/stylin.scss */
 .yes-button {
   font-family: "SteelfishRegular", Arial, sans-serif;
   color: #fff;
@@ -314,17 +381,17 @@ h3 {
   -khtml-border-radius: 30px;
   border-radius: 30px;
 }
-/* line 193, ../../sass/stylin.scss */
+/* line 221, ../../sass/stylin.scss */
 .yes-button:hover {
   background: #00aeef;
 }
-/* line 195, ../../sass/stylin.scss */
+/* line 223, ../../sass/stylin.scss */
 .yes-button a {
   color: #fff;
   text-decoration: none;
 }
 
-/* line 202, ../../sass/stylin.scss */
+/* line 230, ../../sass/stylin.scss */
 .no-button {
   font-family: "SteelfishRegular", Arial, sans-serif;
   color: #fff;
@@ -344,17 +411,17 @@ h3 {
   -khtml-border-radius: 30px;
   border-radius: 30px;
 }
-/* line 212, ../../sass/stylin.scss */
+/* line 240, ../../sass/stylin.scss */
 .no-button:hover {
   background: #00aeef;
 }
-/* line 214, ../../sass/stylin.scss */
+/* line 242, ../../sass/stylin.scss */
 .no-button a {
   color: #fff;
   text-decoration: none;
 }
 
-/* line 221, ../../sass/stylin.scss */
+/* line 249, ../../sass/stylin.scss */
 .yes-button-small {
   font-family: "SteelfishRegular", Arial, sans-serif;
   color: #fff;
@@ -375,12 +442,12 @@ h3 {
   border-radius: 20px;
   border: none;
 }
-/* line 232, ../../sass/stylin.scss */
+/* line 260, ../../sass/stylin.scss */
 .yes-button-small:hover {
   background: #00aeef;
 }
 
-/* line 236, ../../sass/stylin.scss */
+/* line 264, ../../sass/stylin.scss */
 .no-button-small {
   font-family: "SteelfishRegular", Arial, sans-serif;
   color: #fff;
@@ -401,12 +468,12 @@ h3 {
   border-radius: 20px;
   border: none;
 }
-/* line 247, ../../sass/stylin.scss */
+/* line 275, ../../sass/stylin.scss */
 .no-button-small:hover {
   background: #00aeef;
 }
 
-/* line 251, ../../sass/stylin.scss */
+/* line 279, ../../sass/stylin.scss */
 .entry-form {
   background: #fff;
   border-bottom: solid 1px #000;
@@ -418,4 +485,9 @@ h3 {
   width: 350px;
   color: #000;
   text-align: center;
+}
+
+/* line 293, ../../sass/stylin.scss */
+.icon-fp_line_vert {
+  margin: 12px 30px 0 30px;
 }
