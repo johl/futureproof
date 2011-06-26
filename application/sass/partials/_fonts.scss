@@ -1,3 +1,10 @@
+/* ---------- COLOR VARIABLES ---------- */
+
+$default-copy: #636363; 
+$yes-color: #6aac10;
+$no-color: #da2f30;
+$info-box: #edf7ff;
+$form-box: #fffcda;
 $link: #00aeef;
 
 @import "compass/css3/font-face";
@@ -7,27 +14,13 @@ $link: #00aeef;
 @include font-face("JosefinSlabLight", font-files("JosefinSlab-Light-webfont.ttf", truetype, "JosefinSlab-Light-webfont.woff", woff, "JosefinSlab-Light-webfont-webfont.eot", eot, "JosefinSlab-Light-webfont.eot?iefix", embedded-opentype, "JosefinSlab-Light-webfont.svg#JosefinSlabThin", svg));
 
 
-.caption{
-	font: 13px/18px Georgia, Times New Roman, serif;
-	color: #000;
-	font-style: italic;
-}
 
-@mixin subhead{
-	font: 24px/28px Georgia, Times New Roman, serif;
+@mixin georgia{
+	font: Georgia, "Times New Roman", serif;
 	color: #000;
 	margin: 0;
 	padding: 0;
 	text-transform: none;
-}
-
-span.first
-{
- float: left;
- font-family: "JosefinSlabLight", Georgia, sans-serif;
- font-size: 450%;
- line-height: 30px;
- margin: 17px 10px 5px 3px;
 }
 
 @mixin ff-steelfish{
@@ -47,8 +40,8 @@ span.first
 	font-family: monospace;
 }
 
-@mixin footer_text{
-	font: Georgia, Times New Roman, serif;
+@mixin footer-text{
+	@include georgia; 
 	color: #fff;
 	margin: 0;
 	padding: 0 0 8px 0;
@@ -58,4 +51,122 @@ span.first
 	  &:hover {text-decoration: none;};
 	}
 }
+
+h1
+  {
+  @include ff-josefin; 
+	font-size:60px;
+	line-height: 90px;
+	margin-bottom: 20px;
+  }
+
+h2
+  {
+  @include ff-steelfish;
+	font-size:50px;
+	line-height: 50px; 
+	}
+	
+h3
+  { 
+  @include georgia; 
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: normal;
+  }
+
+.carousel
+  {
+  font: 24px/28px Georgia, Times New Roman, serif;
+  color: #000;
+  text-transform: none;
+  background: $form-box;
+  border-bottom: 3px solid #000;
+  padding: 10px;
+  text-align: center;
+  margin: 10px auto 20px auto;
+  width:600px;
+  }
+    
+.caption
+  {
+	font: 13px/18px Georgia, Times New Roman, serif;
+	color: #000;
+	font-style: italic;
+  }
+  
+.caption-reverse
+  { 
+  @include footer-text; 
+  font-size: 13px;
+  font-style: italic;
+  }
+
+span.first
+  {
+ float: left;
+ font-family: "JosefinSlabLight", Georgia, sans-serif;
+ font-size: 450%;
+ line-height: 30px;
+ margin: 17px 10px 5px 3px;
+  }
+
+.item-text
+  { 
+  @include georgia; 
+  font-size: 18px;
+  line-height: 22px;
+  }
+
+.footer-head
+  { 
+  @include footer-text; 
+  font-size:18px;
+  text-align: left;
+  }
+
+.footer-email
+  { 
+  @include footer-text; 
+  font-size:14px;
+  font-style: italic;
+  text-align: left;
+  }
+
+
+.submit-head
+  {
+  @include ff-josefin; 
+  font-size:34px;
+  }
+
+
+.leader-subhead
+  {
+  @include ff-steelfish;
+  color: #fff;
+  font-size:  30px;
+  line-height: 40px;
+  font-weight: normal;
+  text-transform: uppercase;
+  }
+  
+.hidden-text
+  {
+  display: none;
+  }
+
+.percentage
+  {
+  @include ff-steelfish;
+  color: $yes-color;
+  font-size:  50px;
+  line-height: 60px;
+  font-weight: normal;
+  text-transform: uppercase;
+  float: right;
+  display: block;
+  padding: 0 0 10px 20px;
+  }
+  
 	

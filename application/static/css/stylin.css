@@ -1,3 +1,4 @@
+/* ---------- COLOR VARIABLES ---------- */
 @font-face {
   font-family: "SteelfishRegular";
   src: url('/static/fonts/steelfish_rg-webfont.ttf') format('truetype'), url('/static/fonts/steelfish_rg-webfont.woff') format('woff'), url('/static/fonts/steelfish_eb-webfont.eot') format('eot'), url('/static/fonts/steelfish_rg-webfont.eot?iefix') format('eot'), url('/static/fonts/steelfish_eb-webfont.svg#webfont9KBGdVpU') format('svg');
@@ -8,20 +9,192 @@
   src: url('/static/fonts/JosefinSlab-Light-webfont.ttf') format('truetype'), url('/static/fonts/JosefinSlab-Light-webfont.woff') format('woff'), url('/static/fonts/JosefinSlab-Light-webfont-webfont.eot') format('eot'), url('/static/fonts/JosefinSlab-Light-webfont.eot?iefix') format('embedded-opentype'), url('/static/fonts/JosefinSlab-Light-webfont.svg#JosefinSlabThin') format('svg');
 }
 
-/* line 10, ../../sass/partials/_fonts.scss */
+/* line 56, ../../sass/partials/_fonts.scss */
+h1 {
+  font-family: "JosefinSlabLight", Georgia, sans-serif;
+  color: #636363;
+  text-transform: uppercase;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 60px;
+  line-height: 90px;
+  margin-bottom: 20px;
+}
+
+/* line 64, ../../sass/partials/_fonts.scss */
+h2 {
+  font-family: "SteelfishRegular", Arial, sans-serif;
+  color: #fff;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 50px;
+  line-height: 50px;
+}
+
+/* line 71, ../../sass/partials/_fonts.scss */
+h3 {
+  font: Georgia, "Times New Roman", serif;
+  color: #000;
+  margin: 0;
+  padding: 0;
+  text-transform: none;
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: normal;
+}
+
+/* line 79, ../../sass/partials/_fonts.scss */
+.carousel {
+  font: 24px/28px Georgia, Times New Roman, serif;
+  color: #000;
+  text-transform: none;
+  background: #fffcda;
+  border-bottom: 3px solid #000;
+  padding: 10px;
+  text-align: center;
+  margin: 10px auto 20px auto;
+  width: 600px;
+}
+
+/* line 92, ../../sass/partials/_fonts.scss */
 .caption {
   font: 13px/18px Georgia, Times New Roman, serif;
   color: #000;
   font-style: italic;
 }
 
-/* line 25, ../../sass/partials/_fonts.scss */
+/* line 99, ../../sass/partials/_fonts.scss */
+.caption-reverse {
+  font: Georgia, "Times New Roman", serif;
+  color: #000;
+  margin: 0;
+  padding: 0;
+  text-transform: none;
+  color: #fff;
+  margin: 0;
+  padding: 0 0 8px 0;
+  font-size: 13px;
+  font-style: italic;
+}
+/* line 48, ../../sass/partials/_fonts.scss */
+.caption-reverse a {
+  color: #00aeef;
+  text-decoration: underline;
+}
+/* line 51, ../../sass/partials/_fonts.scss */
+.caption-reverse a:hover {
+  text-decoration: none;
+}
+
+/* line 106, ../../sass/partials/_fonts.scss */
 span.first {
   float: left;
   font-family: "JosefinSlabLight", Georgia, sans-serif;
   font-size: 450%;
   line-height: 30px;
   margin: 17px 10px 5px 3px;
+}
+
+/* line 115, ../../sass/partials/_fonts.scss */
+.item-text {
+  font: Georgia, "Times New Roman", serif;
+  color: #000;
+  margin: 0;
+  padding: 0;
+  text-transform: none;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+/* line 122, ../../sass/partials/_fonts.scss */
+.footer-head {
+  font: Georgia, "Times New Roman", serif;
+  color: #000;
+  margin: 0;
+  padding: 0;
+  text-transform: none;
+  color: #fff;
+  margin: 0;
+  padding: 0 0 8px 0;
+  font-size: 18px;
+  text-align: left;
+}
+/* line 48, ../../sass/partials/_fonts.scss */
+.footer-head a {
+  color: #00aeef;
+  text-decoration: underline;
+}
+/* line 51, ../../sass/partials/_fonts.scss */
+.footer-head a:hover {
+  text-decoration: none;
+}
+
+/* line 129, ../../sass/partials/_fonts.scss */
+.footer-email {
+  font: Georgia, "Times New Roman", serif;
+  color: #000;
+  margin: 0;
+  padding: 0;
+  text-transform: none;
+  color: #fff;
+  margin: 0;
+  padding: 0 0 8px 0;
+  font-size: 14px;
+  font-style: italic;
+  text-align: left;
+}
+/* line 48, ../../sass/partials/_fonts.scss */
+.footer-email a {
+  color: #00aeef;
+  text-decoration: underline;
+}
+/* line 51, ../../sass/partials/_fonts.scss */
+.footer-email a:hover {
+  text-decoration: none;
+}
+
+/* line 138, ../../sass/partials/_fonts.scss */
+.submit-head {
+  font-family: "JosefinSlabLight", Georgia, sans-serif;
+  color: #636363;
+  text-transform: uppercase;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 34px;
+}
+
+/* line 145, ../../sass/partials/_fonts.scss */
+.leader-subhead {
+  font-family: "SteelfishRegular", Arial, sans-serif;
+  color: #fff;
+  font-weight: normal;
+  font-style: normal;
+  color: #fff;
+  font-size: 30px;
+  line-height: 40px;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+/* line 155, ../../sass/partials/_fonts.scss */
+.hidden-text {
+  display: none;
+}
+
+/* line 160, ../../sass/partials/_fonts.scss */
+.percentage {
+  font-family: "SteelfishRegular", Arial, sans-serif;
+  color: #fff;
+  font-weight: normal;
+  font-style: normal;
+  color: #6aac10;
+  font-size: 50px;
+  line-height: 60px;
+  font-weight: normal;
+  text-transform: uppercase;
+  float: right;
+  display: block;
+  padding: 0 0 10px 20px;
 }
 
 /* line 93, icon */
@@ -109,12 +282,12 @@ span.first {
 
 /* ---------- COLOR VARIABLES ---------- */
 /* ---------- LAYOUT STYLES ---------- */
-/* line 20, ../../sass/stylin.scss */
+/* line 22, ../../sass/stylin.scss */
 html {
   min-height: 100%;
 }
 
-/* line 25, ../../sass/stylin.scss */
+/* line 27, ../../sass/stylin.scss */
 body {
   background: #705c6c url("/static/img/fp_gradient_bg_04.jpg") repeat left top;
   color: #636363;
@@ -125,7 +298,7 @@ body {
   padding: 0;
 }
 
-/* line 37, ../../sass/stylin.scss */
+/* line 39, ../../sass/stylin.scss */
 .triangle-container {
   background: url("/static/img/fp_triangles_bg.png") center 50px no-repeat fixed;
   position: relative;
@@ -134,7 +307,7 @@ body {
   padding: 0;
 }
 
-/* line 46, ../../sass/stylin.scss */
+/* line 48, ../../sass/stylin.scss */
 .site-container {
   background: #000;
   min-height: 100%;
@@ -143,7 +316,7 @@ body {
   width: 800px;
 }
 
-/* line 55, ../../sass/stylin.scss */
+/* line 57, ../../sass/stylin.scss */
 .header {
   background: #000;
   height: 90px;
@@ -152,7 +325,7 @@ body {
   text-align: center;
 }
 
-/* line 64, ../../sass/stylin.scss */
+/* line 66, ../../sass/stylin.scss */
 .content {
   background: #fff;
   padding: 10px 0px;
@@ -161,7 +334,88 @@ body {
   text-align: center;
 }
 
-/* line 73, ../../sass/stylin.scss */
+/* line 75, ../../sass/stylin.scss */
+.info {
+  background: #edf7ff;
+  padding: 10px;
+  width: 720px;
+  border: 30px solid #fff;
+  margin: 0;
+  text-align: left;
+  clear: both;
+}
+
+/* line 86, ../../sass/stylin.scss */
+.leaderboard-tease {
+  clear: both;
+  padding: 10px 0px;
+  margin: 0 auto;
+  width: 800px;
+}
+
+/* line 94, ../../sass/stylin.scss */
+.leader-yes {
+  float: left;
+  width: 360px;
+  margin: 0 10px 0 30px;
+  padding: 0;
+}
+
+/* line 102, ../../sass/stylin.scss */
+.leader-no {
+  float: right;
+  width: 360px;
+  margin: 0 30px 0 10px;
+  padding: 0;
+}
+
+/* line 110, ../../sass/stylin.scss */
+.leader-title-box {
+  display: block;
+  background: #000;
+  width: 100%;
+  margin: 5px 0 5px 0;
+  padding: 10px 0 10px 0;
+  text-align: center;
+}
+
+/* line 120, ../../sass/stylin.scss */
+.item-box {
+  background: #ccc;
+  border-bottom: 3px #ccc solid;
+  width: 100%;
+  margin: 5px 0 5px 0;
+  padding: 10px 0 10px 0;
+  text-align: left;
+}
+/* line 127, ../../sass/stylin.scss */
+.item-box:hover {
+  border-bottom: 3px #00aeef solid;
+}
+/* line 129, ../../sass/stylin.scss */
+.item-box a {
+  padding: 10px;
+  display: block;
+  text-decoration: none;
+}
+
+/* line 137, ../../sass/stylin.scss */
+.icon-fp_comment {
+  float: left;
+  width: auto !important;
+  margin-top: 10px;
+}
+/* line 142, ../../sass/stylin.scss */
+.icon-fp_comment .caption {
+  padding-left: 22px;
+}
+
+/* line 148, ../../sass/stylin.scss */
+.view-all-row {
+  clear: both;
+}
+
+/* line 153, ../../sass/stylin.scss */
 .submit {
   background: #fffcda;
   padding: 20px 20px 70px 20px;
@@ -173,33 +427,33 @@ body {
   margin: 0;
   text-align: center;
 }
-/* line 83, ../../sass/stylin.scss */
+/* line 163, ../../sass/stylin.scss */
 .submit p {
   margin: 0;
   padding: 5px;
 }
 
-/* line 90, ../../sass/stylin.scss */
+/* line 170, ../../sass/stylin.scss */
 .ad-row {
   background: #fff;
   padding: 30px;
 }
 
-/* line 96, ../../sass/stylin.scss */
+/* line 176, ../../sass/stylin.scss */
 .footer {
   background: #000;
   padding: 20px 10px 85px 10px;
 }
-/* line 99, ../../sass/stylin.scss */
+/* line 179, ../../sass/stylin.scss */
 .footer ul {
   margin: 0;
 }
-/* line 101, ../../sass/stylin.scss */
+/* line 181, ../../sass/stylin.scss */
 .footer ul li {
   margin: 0 5px 0 5px;
 }
 
-/* line 108, ../../sass/stylin.scss */
+/* line 188, ../../sass/stylin.scss */
 ul {
   list-style-type: none;
   margin: 0 0 20px 0;
@@ -210,7 +464,7 @@ ul {
   clear: left;
   float: left;
 }
-/* line 117, ../../sass/stylin.scss */
+/* line 197, ../../sass/stylin.scss */
 ul li {
   position: relative;
   right: 50%;
@@ -220,148 +474,18 @@ ul li {
   text-align: center;
   padding: 0;
 }
-/* line 125, ../../sass/stylin.scss */
+/* line 205, ../../sass/stylin.scss */
 ul li p {
   padding: 0;
   margin: 0;
 }
 
-/* line 133, ../../sass/stylin.scss */
+/* line 213, ../../sass/stylin.scss */
 .fb-like {
   padding-top: 8px;
 }
 
-/* line 138, ../../sass/stylin.scss */
-.info {
-  background: #edf7ff;
-  padding: 10px;
-  width: 720px;
-  border: 30px solid #fff;
-  margin: 0;
-  text-align: left;
-  clear: both;
-}
-
-/* line 149, ../../sass/stylin.scss */
-.leaderboard-tease {
-  clear: both;
-}
-
-/* line 154, ../../sass/stylin.scss */
-h1 {
-  font-family: "JosefinSlabLight", Georgia, sans-serif;
-  color: #636363;
-  text-transform: uppercase;
-  font-weight: normal;
-  font-style: normal;
-  font-size: 60px;
-  line-height: 90px;
-  margin-bottom: 20px;
-}
-
-/* line 162, ../../sass/stylin.scss */
-h2 {
-  font-family: "SteelfishRegular", Arial, sans-serif;
-  color: #fff;
-  font-weight: normal;
-  font-style: normal;
-  font-size: 50px;
-  line-height: 50px;
-}
-
-/* line 168, ../../sass/stylin.scss */
-h3 {
-  font: 24px/28px Georgia, Times New Roman, serif;
-  color: #000;
-  margin: 0;
-  padding: 0;
-  text-transform: none;
-}
-
-/* line 171, ../../sass/stylin.scss */
-.footer_head {
-  font: Georgia, Times New Roman, serif;
-  color: #fff;
-  margin: 0;
-  padding: 0 0 8px 0;
-  font-size: 18px;
-  text-align: left;
-}
-/* line 55, ../../sass/partials/_fonts.scss */
-.footer_head a {
-  color: #00aeef;
-  text-decoration: underline;
-}
-/* line 58, ../../sass/partials/_fonts.scss */
-.footer_head a:hover {
-  text-decoration: none;
-}
-
-/* line 178, ../../sass/stylin.scss */
-.footer_email {
-  font: Georgia, Times New Roman, serif;
-  color: #fff;
-  margin: 0;
-  padding: 0 0 8px 0;
-  font-size: 14px;
-  font-style: italic;
-  text-align: left;
-}
-/* line 55, ../../sass/partials/_fonts.scss */
-.footer_email a {
-  color: #00aeef;
-  text-decoration: underline;
-}
-/* line 58, ../../sass/partials/_fonts.scss */
-.footer_email a:hover {
-  text-decoration: none;
-}
-
-/* line 186, ../../sass/stylin.scss */
-.footer_text {
-  font: Georgia, Times New Roman, serif;
-  color: #fff;
-  margin: 0;
-  padding: 0 0 8px 0;
-  font-size: 14px;
-  font-style: italic;
-}
-/* line 55, ../../sass/partials/_fonts.scss */
-.footer_text a {
-  color: #00aeef;
-  text-decoration: underline;
-}
-/* line 58, ../../sass/partials/_fonts.scss */
-.footer_text a:hover {
-  text-decoration: none;
-}
-
-/* line 194, ../../sass/stylin.scss */
-.submit-head {
-  font-family: "JosefinSlabLight", Georgia, sans-serif;
-  color: #636363;
-  text-transform: uppercase;
-  font-weight: normal;
-  font-style: normal;
-  font-size: 34px;
-}
-
-/* line 200, ../../sass/stylin.scss */
-.carousel {
-  font: 24px/28px Georgia, Times New Roman, serif;
-  color: #000;
-  margin: 0;
-  padding: 0;
-  text-transform: none;
-  background: #fffcda;
-  border-bottom: 3px solid #000;
-  padding: 10px;
-  text-align: center;
-  margin: 10px auto 20px auto;
-  width: 600px;
-}
-
-/* line 211, ../../sass/stylin.scss */
+/* line 218, ../../sass/stylin.scss */
 .yes-button {
   font-family: "SteelfishRegular", Arial, sans-serif;
   color: #fff;
@@ -381,17 +505,17 @@ h3 {
   -khtml-border-radius: 30px;
   border-radius: 30px;
 }
-/* line 221, ../../sass/stylin.scss */
+/* line 228, ../../sass/stylin.scss */
 .yes-button:hover {
   background: #00aeef;
 }
-/* line 223, ../../sass/stylin.scss */
+/* line 230, ../../sass/stylin.scss */
 .yes-button a {
   color: #fff;
   text-decoration: none;
 }
 
-/* line 230, ../../sass/stylin.scss */
+/* line 237, ../../sass/stylin.scss */
 .no-button {
   font-family: "SteelfishRegular", Arial, sans-serif;
   color: #fff;
@@ -411,17 +535,17 @@ h3 {
   -khtml-border-radius: 30px;
   border-radius: 30px;
 }
-/* line 240, ../../sass/stylin.scss */
+/* line 247, ../../sass/stylin.scss */
 .no-button:hover {
   background: #00aeef;
 }
-/* line 242, ../../sass/stylin.scss */
+/* line 249, ../../sass/stylin.scss */
 .no-button a {
   color: #fff;
   text-decoration: none;
 }
 
-/* line 249, ../../sass/stylin.scss */
+/* line 256, ../../sass/stylin.scss */
 .yes-button-small {
   font-family: "SteelfishRegular", Arial, sans-serif;
   color: #fff;
@@ -442,12 +566,12 @@ h3 {
   border-radius: 20px;
   border: none;
 }
-/* line 260, ../../sass/stylin.scss */
+/* line 267, ../../sass/stylin.scss */
 .yes-button-small:hover {
   background: #00aeef;
 }
 
-/* line 264, ../../sass/stylin.scss */
+/* line 271, ../../sass/stylin.scss */
 .no-button-small {
   font-family: "SteelfishRegular", Arial, sans-serif;
   color: #fff;
@@ -468,12 +592,12 @@ h3 {
   border-radius: 20px;
   border: none;
 }
-/* line 275, ../../sass/stylin.scss */
+/* line 282, ../../sass/stylin.scss */
 .no-button-small:hover {
   background: #00aeef;
 }
 
-/* line 279, ../../sass/stylin.scss */
+/* line 286, ../../sass/stylin.scss */
 .entry-form {
   background: #fff;
   border-bottom: solid 1px #000;
@@ -487,7 +611,7 @@ h3 {
   text-align: center;
 }
 
-/* line 293, ../../sass/stylin.scss */
+/* line 300, ../../sass/stylin.scss */
 .icon-fp_line_vert {
   margin: 12px 30px 0 30px;
 }
