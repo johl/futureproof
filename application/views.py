@@ -16,10 +16,11 @@ from models import QuestionModel
 
 def home():
     return render_template('index.html')
-    
+
 def add_question(request):
     """Add a question to the database"""
-    
+    flash('New entry was successfully posted')
+    return redirect(url_for('home'))
 
 
 def warmup():
