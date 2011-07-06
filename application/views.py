@@ -5,21 +5,16 @@ URL routes and handlers
 
 """
 
-
-from google.appengine.api import users
-
-from flask import render_template, flash, url_for, redirect
-
+from flask import render_template, flash, url_for, redirect, request
 from models import QuestionModel
-#from forms import ExampleForm
-
 
 def home():
     return render_template('index.html')
 
-def add_question(request):
+def add_question():
     """Add a question to the database"""
-    flash('New entry was successfully posted')
+    q = QuestionModel(question=request.form['entry'])
+    q.save()
     return redirect(url_for('home'))
 
 
