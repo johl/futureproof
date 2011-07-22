@@ -14,8 +14,9 @@ from google.appengine.ext import db
 #     added_by = db.UserProperty()
 #     timestamp = db.DateTimeProperty(auto_now_add=True)
     
-class QuestionModel(db.Model):
+class Question(db.Model):
     """Question Model"""
     question = db.StringProperty(required=True)
     timestamp = db.DateTimeProperty(auto_now_add=True)
+    aproved = db.StringProperty(required=True)
 

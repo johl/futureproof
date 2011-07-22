@@ -5,16 +5,19 @@ URL routes and handlers
 
 """
 
-from flask import render_template, flash, url_for, redirect, request
-from models import QuestionModel
+from flask import render_template, url_for, redirect, request
+from models import Question
 
 def home():
+    questions = Question.gql( "WHERE aproved = yes" ).get()
+    print questions
     return render_template('index.html')
 
 def add_question():
     """Add a question to the database"""
-    q = QuestionModel(question=request.form['entry'])
-    q.save()
+    if ('entry' in request.form):
+        q = Question(question=request.form['entry'], aproved="no")
+        q.save()
     return redirect(url_for('home'))
 
 
