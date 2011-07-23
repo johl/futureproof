@@ -23,6 +23,11 @@ def add_question():
         q.save()
     return redirect(url_for('home'))
 
+def question():
+    """template for question"""
+    return render_template('question_clean.html')
+    
+
 
 def warmup():
     """App Engine warmup handler
