@@ -7,11 +7,14 @@ URL routes and handlers
 
 from flask import render_template, url_for, redirect, request
 from models import Question
+from types import *
 
 def home():
-    questions = Question.gql( "WHERE aproved = yes" ).get()
-    print questions
-    return render_template('index.html')
+    questions = Question.gql( "WHERE aproved = 'yes'" ).fetch(limit=100)
+    if (not type(questions) == NoneType):
+        return render_template('index.html', questions=questions)
+    else:
+        return render_template('index.html')
 
 def add_question():
     """Add a question to the database"""
