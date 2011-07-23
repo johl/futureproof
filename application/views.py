@@ -19,7 +19,7 @@ def home():
 def add_question():
     """Add a question to the database"""
     if ('entry' in request.form):
-        q = Question(question=request.form['entry'], aproved="no")
+        q = Question(question=request.form['entry'], aproved="yes")
         q.save()
     return redirect(url_for('home'))
 
