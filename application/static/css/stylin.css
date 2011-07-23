@@ -332,14 +332,15 @@ body {
   margin: 0 auto;
   width: 800px;
   text-align: center;
+  overflow: auto;
 }
 
-/* line 75, ../../sass/stylin.scss */
+/* line 76, ../../sass/stylin.scss */
 .question-alone {
   padding-bottom: 200px;
 }
 
-/* line 80, ../../sass/stylin.scss */
+/* line 81, ../../sass/stylin.scss */
 .info {
   background: #edf7ff;
   padding: 10px;
@@ -350,7 +351,7 @@ body {
   clear: both;
 }
 
-/* line 91, ../../sass/stylin.scss */
+/* line 92, ../../sass/stylin.scss */
 .leaderboard-tease {
   clear: both;
   padding: 10px 0px;
@@ -358,7 +359,7 @@ body {
   width: 800px;
 }
 
-/* line 99, ../../sass/stylin.scss */
+/* line 100, ../../sass/stylin.scss */
 .leader-yes {
   float: left;
   width: 360px;
@@ -366,7 +367,7 @@ body {
   padding: 0;
 }
 
-/* line 107, ../../sass/stylin.scss */
+/* line 108, ../../sass/stylin.scss */
 .leader-no {
   float: right;
   width: 360px;
@@ -374,7 +375,7 @@ body {
   padding: 0;
 }
 
-/* line 115, ../../sass/stylin.scss */
+/* line 116, ../../sass/stylin.scss */
 .leader-title-box {
   display: block;
   background: #000;
@@ -384,43 +385,42 @@ body {
   text-align: center;
 }
 
-/* line 125, ../../sass/stylin.scss */
+/* line 126, ../../sass/stylin.scss */
 .item-box {
   background: #ccc;
   border-bottom: 3px #ccc solid;
-  width: 100%;
   margin: 5px 0 5px 0;
   padding: 10px 0 10px 0;
   text-align: left;
 }
-/* line 132, ../../sass/stylin.scss */
+/* line 133, ../../sass/stylin.scss */
 .item-box:hover {
   border-bottom: 3px #00aeef solid;
 }
-/* line 134, ../../sass/stylin.scss */
+/* line 135, ../../sass/stylin.scss */
 .item-box a {
   padding: 10px;
   display: block;
   text-decoration: none;
 }
 
-/* line 142, ../../sass/stylin.scss */
+/* line 143, ../../sass/stylin.scss */
 .icon-fp_comment {
   float: left;
   width: auto !important;
   margin-top: 10px;
 }
-/* line 147, ../../sass/stylin.scss */
+/* line 148, ../../sass/stylin.scss */
 .icon-fp_comment .caption {
   padding-left: 22px;
 }
 
-/* line 153, ../../sass/stylin.scss */
+/* line 154, ../../sass/stylin.scss */
 .view-all-row {
   clear: both;
 }
 
-/* line 158, ../../sass/stylin.scss */
+/* line 159, ../../sass/stylin.scss */
 .submit {
   background: #fffcda;
   padding: 20px 20px 70px 20px;
@@ -432,33 +432,33 @@ body {
   margin: 0;
   text-align: center;
 }
-/* line 168, ../../sass/stylin.scss */
+/* line 169, ../../sass/stylin.scss */
 .submit p {
   margin: 0;
   padding: 5px;
 }
 
-/* line 175, ../../sass/stylin.scss */
+/* line 176, ../../sass/stylin.scss */
 .ad-row {
   background: #fff;
   padding: 30px;
 }
 
-/* line 181, ../../sass/stylin.scss */
+/* line 182, ../../sass/stylin.scss */
 .footer {
   background: #000;
   padding: 20px 10px 85px 10px;
 }
-/* line 184, ../../sass/stylin.scss */
+/* line 185, ../../sass/stylin.scss */
 .footer ul {
   margin: 0;
 }
-/* line 186, ../../sass/stylin.scss */
+/* line 187, ../../sass/stylin.scss */
 .footer ul li {
   margin: 0 5px 0 5px;
 }
 
-/* line 193, ../../sass/stylin.scss */
+/* line 194, ../../sass/stylin.scss */
 ul {
   list-style-type: none;
   margin: 0 0 20px 0;
@@ -469,7 +469,7 @@ ul {
   clear: left;
   float: left;
 }
-/* line 202, ../../sass/stylin.scss */
+/* line 203, ../../sass/stylin.scss */
 ul li {
   position: relative;
   right: 50%;
@@ -479,18 +479,18 @@ ul li {
   text-align: center;
   padding: 0;
 }
-/* line 210, ../../sass/stylin.scss */
+/* line 211, ../../sass/stylin.scss */
 ul li p {
   padding: 0;
   margin: 0;
 }
 
-/* line 218, ../../sass/stylin.scss */
+/* line 219, ../../sass/stylin.scss */
 .fb-like {
   padding-top: 8px;
 }
 
-/* line 223, ../../sass/stylin.scss */
+/* line 224, ../../sass/stylin.scss */
 .yes-button {
   font-family: "SteelfishRegular", Arial, sans-serif;
   color: #fff;
@@ -510,17 +510,17 @@ ul li p {
   -khtml-border-radius: 30px;
   border-radius: 30px;
 }
-/* line 233, ../../sass/stylin.scss */
+/* line 234, ../../sass/stylin.scss */
 .yes-button:hover {
   background: #00aeef;
 }
-/* line 235, ../../sass/stylin.scss */
+/* line 236, ../../sass/stylin.scss */
 .yes-button a {
   color: #fff;
   text-decoration: none;
 }
 
-/* line 242, ../../sass/stylin.scss */
+/* line 243, ../../sass/stylin.scss */
 .no-button {
   font-family: "SteelfishRegular", Arial, sans-serif;
   color: #fff;
@@ -540,17 +540,17 @@ ul li p {
   -khtml-border-radius: 30px;
   border-radius: 30px;
 }
-/* line 252, ../../sass/stylin.scss */
+/* line 253, ../../sass/stylin.scss */
 .no-button:hover {
   background: #00aeef;
 }
-/* line 254, ../../sass/stylin.scss */
+/* line 255, ../../sass/stylin.scss */
 .no-button a {
   color: #fff;
   text-decoration: none;
 }
 
-/* line 261, ../../sass/stylin.scss */
+/* line 262, ../../sass/stylin.scss */
 .yes-button-small {
   font-family: "SteelfishRegular", Arial, sans-serif;
   color: #fff;
@@ -571,12 +571,12 @@ ul li p {
   border-radius: 20px;
   border: none;
 }
-/* line 272, ../../sass/stylin.scss */
+/* line 273, ../../sass/stylin.scss */
 .yes-button-small:hover {
   background: #00aeef;
 }
 
-/* line 276, ../../sass/stylin.scss */
+/* line 277, ../../sass/stylin.scss */
 .no-button-small {
   font-family: "SteelfishRegular", Arial, sans-serif;
   color: #fff;
@@ -597,12 +597,12 @@ ul li p {
   border-radius: 20px;
   border: none;
 }
-/* line 287, ../../sass/stylin.scss */
+/* line 288, ../../sass/stylin.scss */
 .no-button-small:hover {
   background: #00aeef;
 }
 
-/* line 291, ../../sass/stylin.scss */
+/* line 292, ../../sass/stylin.scss */
 .entry-form {
   background: #fff;
   border-bottom: solid 1px #000;
@@ -616,7 +616,7 @@ ul li p {
   text-align: center;
 }
 
-/* line 305, ../../sass/stylin.scss */
+/* line 306, ../../sass/stylin.scss */
 .icon-fp_line_vert {
   margin: 12px 30px 0 30px;
 }
