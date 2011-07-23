@@ -26,7 +26,11 @@ def add_question():
 def question():
     """template for question"""
     return render_template('question_clean.html')
-    
+
+def question_result():
+    """template for question_result"""
+    return render_template('question_result.html')
+
 
 
 def warmup():
