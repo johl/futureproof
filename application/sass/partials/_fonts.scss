@@ -52,6 +52,15 @@ $link: #00aeef;
 	}
 }
 
+@mixin question-result{
+	@include georgia; 
+	color: #000;
+	margin: 0;
+	padding: 0 0 10px 0;
+	font-size: 18px;
+  line-height: 22px;
+}
+
 h1
   {
   @include ff-josefin; 
@@ -159,14 +168,40 @@ span.first
 .percentage
   {
   @include ff-steelfish;
-  color: $yes-color;
   font-size:  50px;
   line-height: 60px;
   font-weight: normal;
   text-transform: uppercase;
   float: right;
-  display: block;
-  padding: 0 0 10px 20px;
+  padding: 0 0 0 20px;
   }
   
-	
+.percentage-result
+  {
+  @include ff-steelfish;
+  font-size:  100px;
+  line-height: 100px;
+  font-weight: normal;
+  text-transform: uppercase;
+  float: left;
+  padding: 0 20px 200px 0;
+  margin:0;
+  }
+  
+.result-text
+  { 
+  @include question-result;
+  padding-bottom: 20px;
+  }
+  
+.question-in-context
+  { 
+  @include question-result;
+  text-decoration: underline;
+  }
+  
+.agreement
+  { 
+  @include question-result;
+  font-style: italic;
+  }
