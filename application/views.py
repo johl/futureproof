@@ -32,7 +32,7 @@ def question_result():
     return render_template('question_result.html')
 
 def leaderboard():
-    """template for question_result"""
+    """template for leaderboard"""
     return render_template('leaderboard.html')
 
 

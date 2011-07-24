@@ -9,15 +9,29 @@
 		<meta name="author" content="jennifer gergen, Jens Ohlig" />
 		<meta name="ROBOTS" content="ALL" />
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/prototype/1.7.0.0/prototype.js"></script>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/scriptaculous/1.8.3/scriptaculous.js"></script>
 		<script type="text/javascript">
-        var questions = new Array;
-        {% for question in questions %}question.push("{{question.question}}");{% endfor %}
+		var random_question = function() {
+		    // Build the array
+		    var questions = new Array;
+		    for (var n=0; n < 100; n++) {
+                {% for question in questions %}questions.push("{{question.question}}");{% endfor %}
+		    };
+            // Loop
+                setInterval ( function() {
+                    //var i = Math.floor(Math.random() * (questions.length + 1));
+                    questions.forEach(function(item) { 
+                        $('carousel').innerHTML = item;
+                        $('carousel').fade({ duration: 3.0, from: 0, to: 1 });                    
+                    });
+                }, 3000);
+		};
         </script>
         <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
 		<link rel="STYLESHEET" type="text/css" href="../static/css/stylin.css?v=1" />
 	</head>
 	
-	<body>
+	<body onLoad="random_question();">
 	<!-- begin #traingle-container -->
 	<div class="triangle-container">
 
@@ -38,7 +52,7 @@
 			<!-- begin #content -->
 			<div class="content">
 
-   		   <h1>Will we still <p class="carousel">borrow library books</p>in 20 years?</h1>
+   		   <h1>Will we still <p class="carousel" id="carousel">borrow library books</p>in 20 years?</h1>
 
 		      <ul>
                <li><div class="yes-button"><a href="#">yes</a></div></li>
