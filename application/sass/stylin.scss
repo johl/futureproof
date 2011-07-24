@@ -153,22 +153,22 @@ body
   }
 }
 
+
 .result{
   padding:20px;
-  border: none;
+  border: none !important;
   width: 560px;
   overflow:hidden;
   &:hover {border:none;};
-  ul{
-    left:none;
-    float: none;
-    display: inline;
-    li {
-    right: none;
-    float: none;
-    }
-  }
-  
+}
+
+.share-question-list{
+  float: left;
+  width:324px;
+  margin: 0 ;
+  padding: 0;
+  ul {margin: 0;}
+  a {padding:0;}
 }
   
 .leader-title{
@@ -189,20 +189,85 @@ body
     }
   }
 
-
 .question-page
   {
   width:600px;
   padding: 40px 0;
   margin: auto;
   overflow: hidden;
+  text-align: left;
   }
+  
+.question-submit
+  {
+  background: $info-box;
+  padding: 30px;
+  text-align: center;
+  overflow:hidden;
+  margin: 0 0 50px 0;
+  }
+
+ul.leaderboard{
+  margin-bottom:0;
+}
+.sort{
+  border-top: solid #000 5px;
+  padding: 10px 0;
+  text-align: left;
+  clear: both;
+}
+
+.pagination{
+  border-bottom: solid #000 5px;
+  padding: 10px 0 0 0;
+  text-align: left;
+  clear: both;
+  overflow: auto;
+}
+
+.amount-results
+  {
+  float: left;
+  width:300px;
+  margin: 0 ;
+  padding: 0;
+  }
+  
+.page-list
+  {
+  float: right;
+  width:300px;
+  margin: 0 ;
+  padding: 0;
+  }
+  
+ul.list-left{
+  left: 0;
+  margin: 0;
+  li{
+    right: 0;
+  }
+}
+
+ul.list-right{
+  left: 0;
+  margin: 0;
+  float:right;
+  li{
+    right: 0;
+  }
+}
     
 .view-all-row
   {
   clear:both;
   }
   
+.next-question-row
+{
+clear:both;
+margin: 30px 0 120px 0;
+}
 .submit
 	{
 	background: $form-box;
@@ -263,11 +328,6 @@ ul
   	}
 	}
 
-
-.fb-like{
-  padding-top: 8px;
-}
-  
 .yes-button
   {
     @include ff-steelfish;

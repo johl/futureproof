@@ -80,7 +80,7 @@ h3
   { 
   @include georgia; 
   font-size: 24px;
-  line-height: 28px;
+  line-height: 15px;
   font-weight: normal;
   }
 
@@ -111,6 +111,24 @@ h3
   font-style: italic;
   }
 
+.sort-option
+  { 
+  @include footer-text; 
+  font-size:14px;
+  line-height: 22px;
+  text-align: left;
+  text-decoration:underline;
+  font-style: italic;
+  &:hover{text-decoration:none;};
+    a{color:$link;}
+  }
+    
+.sort-active {
+    font-weight: bold;
+    color:#000;
+    text-decoration:none;
+  }
+  
 span.first
   {
  float: left;
@@ -182,9 +200,8 @@ span.first
   font-size:  100px;
   line-height: 100px;
   font-weight: normal;
-  text-transform: uppercase;
   float: left;
-  padding: 0 20px 200px 0;
+  padding: 0 20px 30px 0;
   margin:0;
   }
   
@@ -204,4 +221,24 @@ span.first
   { 
   @include question-result;
   font-style: italic;
+  }
+  
+.next-question{
+  font-style: italic;
+  font-size: 18px;
+  &:hover{color:$link;};
+}
+
+.leaderboard-title{
+  margin-bottom:0;
+  line-height:60px;
+}
+
+.tagline
+  { 
+  @include georgia; 
+  font-size: 18px;
+  line-height: 22px;
+  font-style: italic;
+  margin-bottom:50px;
   }
