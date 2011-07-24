@@ -31,6 +31,9 @@ def question_result():
     """template for question_result"""
     return render_template('question_result.html')
 
+def leaderboard():
+    """template for question_result"""
+    return render_template('leaderboard.html')
 
 
 def warmup():
