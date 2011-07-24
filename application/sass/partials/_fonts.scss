@@ -102,6 +102,9 @@ h3
 	font: 13px/18px Georgia, Times New Roman, serif;
 	color: #000;
 	font-style: italic;
+	a {color:#000;
+	  text-decoration:none;
+	  &:hover{color:$link;};}
   }
   
 .caption-reverse
