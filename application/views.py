@@ -23,6 +23,18 @@ def add_question():
         q.save()
     return redirect(url_for('home'))
 
+def question():
+    """template for question"""
+    return render_template('question_clean.html')
+
+def question_result():
+    """template for question_result"""
+    return render_template('question_result.html')
+
+def leaderboard():
+    """template for leaderboard"""
+    return render_template('leaderboard.html')
+
 
 def warmup():
     """App Engine warmup handler

@@ -9,14 +9,31 @@
 		<meta name="author" content="jennifer gergen, Jens Ohlig" />
 		<meta name="ROBOTS" content="ALL" />
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/prototype/1.7.0.0/prototype.js"></script>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/scriptaculous/1.8.3/scriptaculous.js"></script>
 		<script type="text/javascript">
-        var questions = new Array;
-        questions = [{% for question in questions %}"{{question.question}}", {% endfor %}];
+		var random_question = function() {
+		    // Build the array
+		    var questions = new Array;
+		    for (var n=0; n < 100; n++) {
+                {% for question in questions %}questions.push("{{question.question}}");{% endfor %}
+		    };
+            // Loop
+                setInterval ( function() {
+                    //var i = Math.floor(Math.random() * (questions.length + 1));
+                    questions.forEach(function(item) { 
+                        $('carousel').innerHTML = item;
+                        $('carousel').fade({ duration: 3.0, from: 0, to: 1 });                    
+                    });
+                    q = questions.shift();
+                    questions.push(q);
+                }, 3000);
+		};
         </script>
+        <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
 		<link rel="STYLESHEET" type="text/css" href="../static/css/stylin.css?v=1" />
 	</head>
 	
-	<body>
+	<body onLoad="random_question();">
 	<!-- begin #traingle-container -->
 	<div class="triangle-container">
 
@@ -37,7 +54,7 @@
 			<!-- begin #content -->
 			<div class="content">
 
-   		   <h1>Will we still <p class="carousel">borrow library books</p>in 20 years?</h1>
+   		   <h1>Will we still <p class="carousel" id="carousel">borrow library books</p>in 20 years?</h1>
 
 		      <ul>
                <li><div class="yes-button"><a href="#">yes</a></div></li>
@@ -45,12 +62,7 @@
             </ul>
 
             <div class="info">
-               <span class="first">T</span><strong>he world is changing.</strong> Lorem ipsum dolor sit amet, consectetur     
-                     adipiscing elit. Nulla malesuada massa eget odio congue ut blandit risus dignissim. Cras gravida, 
-                     lectus vel rhoncus venenatis, sapien felis volutpat leo, in lacinia nulla enim id ligula. Proin in       
-                     urna orci, in ultricies purus. Proin sed arcu mi, quis aliquam eros. Suspendisse vehicula ipsum vitae 
-                     sapien cursus commodo. Vivamus elementum imperdiet tellus bibendum varius. Maecenas convallis urna 
-                     quis nisl mattis tempus in vitae nulla. Enjoy!
+               <span class="first">T</span><strong>he Future isn't what it used to be. </strong> Things are changing faster then ever. What will stand the test of time? What has run out of time? Will that Technology, Job, or Belief be around in 20 years? Make your voice heard. Tell us what you think. Enjoy!
             </div>
 
             <ul>
@@ -59,32 +71,28 @@
                <li><a href="#"><p class="icon-fp_twitter"><span class="hidden-text">Tweet this! </span></p></a></li>
                <li><a href="#"><p class="icon-fp_facebook"><span class="hidden-text">Share on Facebook! </span></p></a></li>
                <li><a href="#"><p class="icon-fp_email"><span class="hidden-text">Email to your friends. </span></p></a></li>
-               <li class="fb-like">
-                     <div id="fb-root"></div>
-                     <script src="http://connect.facebook.net/en_US/all.js#appId=113139628777594&amp;xfbml=1"></script>
-                     <fb:like href="" send="false" layout="button_count" width="75" show_faces="false" font=""></fb:like>
-               </li>
+               <li><g:plusone size="medium"></g:plusone></li>
                <li><p class="icon-fp_horz_line"></p></li>
             </ul>
 
             <div class="leaderboard-tease">
                <div class="leader-yes">
                   <ul>
-                     <li class="leader-title-box"><h3 class="leader-subhead">Futureproof!</h3><p class="caption-reverse">These things have staying power!</p></li>
-                     <li class="item-box"><a href="#">
-                           <p class="percentage">100 &#37;</p>
+                     <li class="item-box leader-title"><h3 class="leader-subhead">Futureproof!</h3><p class="caption-reverse">These things have staying power!</p></li>
+                     <li class="item-box style-100"><a href="#">
+                           <p class="percentage style-100">100 &#37;</p>
                            <p class="item-text">“Make movies”</p>
                            <p class="icon-fp_comment"><span class="caption">2 comments, 12,986 votes </span></p>
                            </a>
                      </li>
-                     <li class="item-box"><a href="#">
-                           <p class="percentage">100 &#37;</p>
+                     <li class="item-box style-83"><a href="#">
+                           <p class="percentage style-83">82.6 &#37;</p>
                            <p class="item-text">“write text that is so long it will break the frame of the box it’s supposed to be in”</p>
                            <p class="icon-fp_comment"><span class="caption">2 comments, 12,986 votes </span></p>
                            </a>
                      </li>
-                     <li class="item-box"><a href="#">
-                           <p class="percentage">100 &#37;</p>
+                     <li class="item-box style-50"><a href="#">
+                           <p class="percentage style-50">49.9 &#37;</p>
                            <p class="item-text">“Make movies”</p>
                            <p class="icon-fp_comment"><span class="caption">2 comments, 12,986 votes </span></p>
                            </a>
@@ -94,22 +102,22 @@
                
                <div class="leader-no">
                   <ul>
-                     <li class="leader-title-box"><h3 class="leader-subhead">Failboat!</h3>
+                     <li class="item-box leader-title"><h3 class="leader-subhead">Failboat!</h3>
                         <p class="caption-reverse">Say goodbye... these things are going the way of the Dodo.</p>
                      </li>
-                     <li class="item-box"><a href="#">
-                           <p class="percentage">100 &#37;</p>
+                     <li class="item-box style-26"><a href="#">
+                           <p class="percentage style-26">25.8 &#37;</p>
                            <p class="item-text">“Make movies”</p>
                            <p class="icon-fp_comment"><span class="caption">2 comments, 12,986 votes </span></p>
                            </a>
                      </li>
-                     <li class="item-box"><a href="#">
-                           <p class="percentage">100 &#37;</p>
+                     <li class="item-box style-13"><a href="#">
+                           <p class="percentage style-13">13.3 &#37;</p>
                            <p class="item-text">“Make movies”</p>
                            </a>
                      </li>
-                     <li class="item-box"><a href="#">
-                           <p class="percentage">100 &#37;</p>
+                     <li class="item-box style-0"><a href="#">
+                           <p class="percentage style-0">0 &#37;</p>
                            <p class="item-text">“Make movies”</p>
                            <p class="icon-fp_comment"><span class="caption">2 comments, 12,986 votes </span></p>
                            </a>
@@ -121,7 +129,7 @@
             <div class="view-all-row">
                <ul>
                   <li><p class="icon-fp_horz_line_short"></p></li>
-                  <li><a href="#"><p class="caption">View all.</p></a></li>
+                  <li><p class="caption"><a href="#">View all.</a></p></li>
                   <li><a href="#"><p class="icon-fp_arrow"></p></a></li>
                   <li><p class="icon-fp_horz_line_short"></p></li>
                </ul>
@@ -175,11 +183,7 @@
                      <li><a href="#"><p class="icon-fp_twitter"><span class="hidden-text">Tweet this! </span></p></a></li>
                      <li><a href="#"><p class="icon-fp_facebook"><span class="hidden-text">Share on Facebook! </span></p></a></li>
                      <li><a href="#"><p class="icon-fp_email"><span class="hidden-text">Email to your friends. </span></p></a></li>
-                     <li class="fb-like">
-                           <div id="fb-root"></div>
-                           <script src="http://connect.facebook.net/en_US/all.js#appId=113139628777594&amp;xfbml=1"></script>
-                           <fb:like href="" send="false" layout="button_count" width="75" show_faces="false" font=""></fb:like>
-                     </li>
+                     <li><g:plusone size="medium"></g:plusone></li>
                   </ul>
                </li>
             </ul>

@@ -1,0 +1,138 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<title>Is It Futureproof?</title>
+	
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta http-equiv="Expires" content="tuesday after never!" />
+		<meta name="keywords" content="future, futureproof"/>
+		<meta name="author" content="jennifer gergen, Jens Ohlig" />
+		<meta name="ROBOTS" content="ALL" />
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/prototype/1.7.0.0/prototype.js"></script>
+		<script type="text/javascript">
+        var questions = new Array;
+        {% for question in questions %}question.push("{{question.question}}");{% endfor %}
+        </script>
+        <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+		<link rel="STYLESHEET" type="text/css" href="../static/css/stylin.css?v=1" />
+	</head>
+	
+	<body>
+	<!-- begin #traingle-container -->
+	<div class="triangle-container">
+
+		<!-- begin #site-container -->
+		<div class="site-container">
+		
+		
+			<!-- begin #header -->
+			<div class="header">
+			      <h2>
+			         <span class="hidden-text">Is it Futureproof? (.com)</span>
+			         <img src="../static/img/isitfutureproof_logo.png" width="272" height="119" alt="Is It Futureproof? Logo" />
+			      </h2>
+			</div>
+			<!-- end #header -->
+			
+			
+			<!-- begin #content -->
+			<div class="content">
+
+            <div class="question-page">
+               <div class="question-submit">
+                  <p>Thanks for your addition!</p>
+                  <h3 class="subhead"> Will we still <span class="question-in-context">borrow library books</span> in 20 years? </h3>
+               
+                  <p>Got something more to say about it? Leave your comment below.</p>
+                  <p class="caption">"Those who vote on the future are doomed to re-tweet it!"</p>
+                   <ul>
+                      <li><p class="icon-fp_horz_line"></p></li>
+                      <li><a href="#"><p class="icon-fp_twitter"><span class="hidden-text">Tweet this! </span></p></a></li>
+                      <li><a href="#"><p class="icon-fp_facebook"><span class="hidden-text">Share on Facebook! </span></p></a></li>
+                      <li><a href="#"><p class="icon-fp_email"><span class="hidden-text">Email to your friends. </span></p></a></li>
+                      <li><g:plusone size="medium"></g:plusone></li>
+                      <li><p class="icon-fp_horz_line"></p></li>
+                   </ul>
+               </div>
+               <div class="view-all-row">
+                  <ul>
+                     <li><p class="icon-fp_horz_line_short"></p></li>
+                     <li><p class="caption"><a href="#">View all.</a></p></li>
+                     <li><a href="#"><p class="icon-fp_arrow"></p></a></li>
+                     <li><p class="icon-fp_horz_line_short"></p></li>
+                  </ul>
+               </div>
+               
+               <!-- stick disqus here -->
+               <img style="margin-top: 50px" src="../static/img/fp_dummy_comments.png" width="610" height="741" alt="Fp Dummy Comments">
+               
+            </div>
+			</div>
+			<!-- end #content -->
+			
+			
+			<!-- begin #submit -->
+			<div class="submit">
+			   <form action="{{ url_for('add_question') }}" method="post">
+				<p class="submit-head">Got a good one?</p>
+				<p class="caption">Great! Just fill in the blank:</p>
+				<h3>Will we still <input class="entry-form" type="text" name="entry" id="entry" value="" tabindex="1" />in 20 years?</h3>
+
+			      <ul>
+                  <li><input class="yes-button-small" type="submit" value="yes" /></li>
+                  <li><input class="no-button-small" type="submit" value="no" /></li>
+               </ul>
+
+            </form>
+			</div>
+			<!-- end #submit -->
+			
+			
+			<!-- begin #ad-row -->
+			<div class="ad-row">
+				<img src="../static/img/fp_fake_ads.jpg" />
+			</div>
+			<!-- end #ad-row --> 
+			
+			
+			<!-- begin #footer -->
+			<div class="footer">
+            <ul>
+               <li><p class="footer-head">a <a href="#">jen</a> &amp; <a href="#">jens</a> joint.</p>
+                   <p class="footer-email"><a href="mailto:info@isitfutureproof.com">info@isitfutureproof.com</a></p> 
+               </li>
+               <li><p class="icon-fp_line_vert"></p></li>
+               <li>
+                  <p class="caption-reverse">Mobile coming soon &hellip;</p>
+                  <ul>
+                     <li><a href="#"><p class="icon-fp_apple"><span class="hidden-text">iOS app </span></p></a></li>
+                     <li><a href="#"><p class="icon-fp_android"><span class="hidden-text">Android app </span></p></a></li>
+                  </ul>
+               </li>
+               <li><p class="icon-fp_line_vert"></p></li>
+               <li>
+                  <p class="caption-reverse">Sharing is caring &hellip;</p>
+                  <ul>
+                     <li><a href="#"><p class="icon-fp_twitter"><span class="hidden-text">Tweet this! </span></p></a></li>
+                     <li><a href="#"><p class="icon-fp_facebook"><span class="hidden-text">Share on Facebook! </span></p></a></li>
+                     <li><a href="#"><p class="icon-fp_email"><span class="hidden-text">Email to your friends. </span></p></a></li>
+                     <li class="fb-like">
+                           <div id="fb-root"></div>
+                           <script src="http://connect.facebook.net/en_US/all.js#appId=113139628777594&amp;xfbml=1"></script>
+                           <fb:like href="" send="false" layout="button_count" width="75" show_faces="false" font=""></fb:like>
+                     </li>
+                  </ul>
+               </li>
+            </ul>
+			</div>
+			<!-- end #footer -->
+			
+		</div>
+		<!-- end #site-container -->
+	</div>
+	<!-- end #triangle-container -->
+	
+
+	
+	</body>
+</html>

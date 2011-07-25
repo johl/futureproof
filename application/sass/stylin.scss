@@ -10,6 +10,7 @@ $icon-sprite-dimensions: true;
 $default-copy: #636363; 
 $yes-color: #6aac10;
 $no-color: #da2f30;
+$maybe-color: #898989;
 $info-box: #edf7ff;
 $form-box: #fffcda;
 $link: #00aeef;
@@ -70,6 +71,11 @@ body
   width: 800px;
   text-align: center;
   }
+  
+.question-alone
+  	{
+  	padding-bottom: 200px;
+    }
 
 .info
 	{
@@ -106,20 +112,8 @@ body
   padding: 0;
   }
   
-.leader-title-box
-  {
-  display:block;
-  background: #000;
-  width:100%;
-  margin: 5px 0 5px 0;
-  padding: 10px 0 10px 0;
-  text-align:center;
-  }
-  
 .item-box
   {
-  background: #ccc;
-  border-bottom: 3px #ccc solid;
   width:100%;
   margin: 5px 0 5px 0;
   padding: 10px 0 10px 0;
@@ -132,6 +126,56 @@ body
     text-decoration: none;
     }
   }
+
+//sexy color math
+
+@for $fpness from 60 through 100 {
+  .style-#{$fpness} {
+    color:$yes-color;
+    background-color: mix(#c6e29f, #f1f6ea, ($fpness - 60) * 2.5);
+    border-bottom: 3px solid mix(#c6e29f, #f1f6ea, ($fpness - 60) * 2.5);
+  }
+}
+
+@for $fpness from 41 through 59 {
+  .style-#{$fpness} {
+    color:$maybe-color;
+    background-color: mix(#f5f5f5, #fcfcfc, ($fpness - 41) * (100/18));
+    border-bottom: 3px solid mix(#f5f5f5, #fcfcfc, ($fpness - 41) * (100/18));
+  }
+}
+
+@for $fpness from 0 through 40 {
+  .style-#{$fpness} {
+    color:$no-color;
+    background-color: mix(#fff4f0, #ec9797, ($fpness) * 2.5);
+    border-bottom: 3px solid mix(#fff4f0, #ec9797, ($fpness) * 2.5);
+  }
+}
+
+
+.result{
+  padding:20px;
+  border: none !important;
+  width: 560px;
+  overflow:hidden;
+  &:hover {border:none;};
+}
+
+.share-question-list{
+  float: left;
+  margin: 0 ;
+  padding: 0;
+  ul {margin: 0;}
+  a {padding:0;}
+}
+  
+.leader-title{
+  background: #000;
+  border: none;
+  text-align: center;
+  &:hover {border:none;};
+}
   
 .icon-fp_comment
   {
@@ -143,12 +187,86 @@ body
     padding-left: 22px;
     }
   }
+
+.question-page
+  {
+  width:600px;
+  padding: 40px 0;
+  margin: auto;
+  overflow: hidden;
+  text-align: left;
+  }
   
+.question-submit
+  {
+  background: $info-box;
+  padding: 30px;
+  text-align: center;
+  overflow:hidden;
+  margin: 0 0 50px 0;
+  }
+
+ul.leaderboard{
+  margin-bottom:0;
+}
+.sort{
+  border-top: solid #000 5px;
+  padding: 10px 0;
+  text-align: left;
+  clear: both;
+}
+
+.pagination{
+  border-bottom: solid #000 5px;
+  padding: 10px 0 0 0;
+  text-align: left;
+  clear: both;
+  overflow: auto;
+}
+
+.amount-results
+  {
+  float: left;
+  width:300px;
+  margin: 0 ;
+  padding: 0;
+  }
+  
+.page-list
+  {
+  float: right;
+  width:300px;
+  margin: 0 ;
+  padding: 0;
+  }
+  
+ul.list-left{
+  left: 0;
+  margin: 0;
+  li{
+    right: 0;
+  }
+}
+
+ul.list-right{
+  left: 0;
+  margin: 0;
+  float:right;
+  li{
+    right: 0;
+  }
+}
+    
 .view-all-row
   {
   clear:both;
   }
   
+.next-question-row
+{
+clear:both;
+margin: 30px 0 60px 0;
+}
 .submit
 	{
 	background: $form-box;
@@ -209,11 +327,6 @@ ul
   	}
 	}
 
-
-.fb-like{
-  padding-top: 8px;
-}
-  
 .yes-button
   {
     @include ff-steelfish;
