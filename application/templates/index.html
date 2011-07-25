@@ -24,6 +24,8 @@
                         $('carousel').innerHTML = item;
                         $('carousel').fade({ duration: 3.0, from: 0, to: 1 });                    
                     });
+                    q = questions.shift();
+                    questions.push(q);
                 }, 3000);
 		};
         </script>
