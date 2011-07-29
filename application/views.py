@@ -27,9 +27,12 @@ def question():
     """template for question"""
     return render_template('question_clean.html')
 
-def question_result():
+def question_result(qid=None):
     """template for question_result"""
-    return render_template('question_result.html')
+    if (qid):
+        return render_template('question_result.html', id=qid)
+    else:
+        return render_template('question_result.html')
 
 def leaderboard():
     """template for leaderboard"""
