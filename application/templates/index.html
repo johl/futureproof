@@ -8,8 +8,8 @@
 		<meta name="keywords" content="future, futureproof"/>
 		<meta name="author" content="jennifer gergen, Jens Ohlig" />
 		<meta name="ROBOTS" content="ALL" />
-        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/prototype/1.7.0.0/prototype.js"></script>
-		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/scriptaculous/1.8.3/scriptaculous.js"></script>
+        <script type="text/javascript" src="/static/js/prototype.js"></script>
+		<script type="text/javascript" src="/static/js/scriptaculous.js"></script>
 		<script type="text/javascript">
 		var random_question = function() {
 		    // Build the array
@@ -18,11 +18,9 @@
                 {% for question in questions %}questions.push("{{question.question}}");{% endfor %}
 		    };
             // Loop
-                setInterval ( function() {
-                    //var i = Math.floor(Math.random() * (questions.length + 1));
+                intervalID = setInterval ( function() {
                     questions.forEach(function(item) { 
                         $('carousel').innerHTML = item;
-                        $('carousel').fade({ duration: 3.0, from: 0, to: 1 });                    
                     });
                     q = questions.shift();
                     questions.push(q);
@@ -54,11 +52,11 @@
 			<!-- begin #content -->
 			<div class="content">
 
-   		   <h1>Will we still <p class="carousel" id="carousel">borrow library books</p>in 20 years?</h1>
+   		   <h1>Will we still <p class="carousel" id="carousel" onmouseOver="clearInterval(intervalID);">borrow library books</p>in 20 years?</h1>
 
 		      <ul>
-               <li><div class="yes-button"><a href="#">yes</a></div></li>
-               <li><div class="no-button"><a href="#">no</a></div></li>
+               <li><div class="yes-button"><a href="#" onmouseOver="clearInterval(intervalID);">yes</a></div></li>
+               <li><div class="no-button"><a href="#" onmouseOver="clearInterval(intervalID);">no</a></div></li>
             </ul>
 
             <div class="info">
