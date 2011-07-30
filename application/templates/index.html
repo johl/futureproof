@@ -20,13 +20,14 @@
             // Loop
                 intervalID = setInterval ( function() {
                     $('carousel').innerHTML = questions[questions.length - 1];
+                    //$('question_form').action = "";
                     q = questions.shift();
                     questions.push(q);
                 }, 3000);
 		};
         </script>
         <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
-		<link rel="STYLESHEET" type="text/css" href="../static/css/stylin.css?v=1" />
+		<link rel="STYLESHEET" type="text/css" href="/static/css/stylin.css?v=1" />
 	</head>
 	
 	<body onLoad="random_question();">
@@ -41,7 +42,7 @@
 			<div class="header">
 			      <h2>
 			         <span class="hidden-text">Is it Futureproof? (.com)</span>
-			         <img src="../static/img/isitfutureproof_logo.png" width="272" height="119" alt="Is It Futureproof? Logo">
+			         <img src="/static/img/isitfutureproof_logo.png" width="272" height="119" alt="Is It Futureproof? Logo">
 			      </h2>
 			</div>
 			<!-- end #header -->
@@ -50,11 +51,13 @@
 			<!-- begin #content -->
 			<div class="content">
 
-   		   <h1>Will we still <p class="carousel" id="carousel" onmouseOver="clearInterval(intervalID);">borrow library books</p>in 20 years?</h1>
-
+   		   <h1>Will we still <p class="carousel" id="carousel" onmouseOver="clearInterval(intervalID);">{{questions[0].question}}</p>in 20 years?</h1>
+              <form id='question_form' action='/question/{{questions[0].key()}}' method="POST">
+                  <input type="hidden" name="vote" value="yes" id="vote_value">
+              </form>
 		      <ul>
-               <li><div class="yes-button"><a href="#" onmouseOver="clearInterval(intervalID);">yes</a></div></li>
-               <li><div class="no-button"><a href="#" onmouseOver="clearInterval(intervalID);">no</a></div></li>
+               <li><div class="yes-button"><a href="#" onmouseOver="clearInterval(intervalID);" onClick="$('vote_value').value = 'yes';$('question_form').submit();false;">yes</a></div></li>
+               <li><div class="no-button"><a href="#" onmouseOver="clearInterval(intervalID);" onClick="$('vote_value').value = 'no';$('question_form').submit();false;">no</a></div></li>
             </ul>
 
             <div class="info">
@@ -153,7 +156,7 @@
 			
 			<!-- begin #ad-row -->
 			<div class="ad-row">
-				<img src="../static/img/fp_fake_ads.jpg" />
+				<img src="/static/img/fp_fake_ads.jpg" />
 			</div>
 			<!-- end #ad-row --> 
 			
