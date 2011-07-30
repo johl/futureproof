@@ -19,9 +19,7 @@
 		    };
             // Loop
                 intervalID = setInterval ( function() {
-                    questions.forEach(function(item) { 
-                        $('carousel').innerHTML = item;
-                    });
+                    $('carousel').innerHTML = questions[questions.length - 1];
                     q = questions.shift();
                     questions.push(q);
                 }, 3000);
