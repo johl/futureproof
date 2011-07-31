@@ -14,7 +14,7 @@
         {% for question in questions %}question.push("{{question.question}}");{% endfor %}
         </script>
         <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
-		<link rel="STYLESHEET" type="text/css" href="../static/css/stylin.css?v=1" />
+		<link rel="STYLESHEET" type="text/css" href="/static/css/stylin.css?v=1" />
 	</head>
 	
 	<body>
@@ -29,7 +29,7 @@
 			<div class="header">
 			      <h2>
 			         <span class="hidden-text">Is it Futureproof? (.com)</span>
-			         <img src="../static/img/isitfutureproof_logo.png" width="272" height="119" alt="Is It Futureproof? Logo" />
+			         <img src="/static/img/isitfutureproof_logo.png" width="272" height="119" alt="Is It Futureproof? Logo" />
 			      </h2>
 			</div>
 			<!-- end #header -->
@@ -40,9 +40,9 @@
 
             <div class="question-page">
                <div class="item-box result style-92">
-                  <p class="percentage-result style-92">91.8 &#37;</p>
-                  <p class="result-text">of the 234,876 people who voted think that we won’t still <span class="question-in-context">borrow library books</span> in 20 years.</p>
-                  <p class="result-text">You <span class="agreement">agreed</span>.</p>
+                  <p class="percentage-result style-92">{{percent}} &#37;</p>
+                  <p class="result-text">of the {{total}} people who voted think that we won’t still <span class="question-in-context">{{question}}</span> in 20 years.</p>
+                  <p class="result-text">You <span class="agreement">{{agreed}}</span>.</p>
                   
                   <div class="share-question-list">
                      <ul class="list-left">
@@ -73,7 +73,7 @@
                </div>
                
                <!-- stick disqus here -->
-               <img src="../static/img/fp_dummy_comments.png" width="610" height="741" alt="Fp Dummy Comments">
+               <img src="/static/img/fp_dummy_comments.png" width="610" height="741" alt="Fp Dummy Comments">
                
             </div>
 			</div>
@@ -99,7 +99,7 @@
 			
 			<!-- begin #ad-row -->
 			<div class="ad-row">
-				<img src="../static/img/fp_fake_ads.jpg" />
+				<img src="/static/img/fp_fake_ads.jpg" />
 			</div>
 			<!-- end #ad-row --> 
 			
