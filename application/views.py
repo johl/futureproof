@@ -7,6 +7,7 @@ URL routes and handlers
 
 from flask import render_template, url_for, redirect, request
 from models import Question
+from decimal import Decimal
 from types import *
 
 def home():
@@ -30,7 +31,29 @@ def question():
 def question_result(qid=None):
     """template for question_result"""
     if (qid):
-        return render_template('question_result.html', id=qid)
+        agree = "didn't tell us if you agree or disagree"
+        question = Question.get(qid)
+        if (question.total == None):
+            question.total = 0
+        if (question.no == None):
+            question.no = 0
+        if (question.yes == None):
+            question.yes = 0
+        if ('vote_value' in request.form):
+            question.total = question.total + 1
+            if (request.form['vote_value'] == "yes"):
+                question.yes = question.yes +1
+                agree = "disagree"
+            if (request.form['vote_value'] == "no"):
+                question.no = question.no +1
+                agree = "agree"
+        question.save()
+        question = Question.get(qid)
+        percent = 0
+        if (question.total > 0):
+            TWOPLACES = Decimal(10) ** -2
+            percent = float(Decimal(str(float(1.0*question.no/question.total)*100)).quantize(TWOPLACES))
+        return render_template('question_result.html', question=question.question, percent=percent, total=question.total, agreed=agree)
     else:
         return render_template('question_result.html')
 

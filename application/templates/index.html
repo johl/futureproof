@@ -1,63 +1,79 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-	<head>
-		<title>Is It Futureproof?</title>
-	
-		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<meta http-equiv="Expires" content="tuesday after never!" />
-		<meta name="keywords" content="future, futureproof"/>
-		<meta name="author" content="jennifer gergen, Jens Ohlig" />
-		<meta name="ROBOTS" content="ALL" />
+    <head>
+        <title>Is It Futureproof?</title>
+    
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta http-equiv="Expires" content="tuesday after never!" />
+        <meta name="keywords" content="future, futureproof"/>
+        <meta name="author" content="jennifer gergen, Jens Ohlig" />
+        <meta name="ROBOTS" content="ALL" />
         <script type="text/javascript" src="/static/js/prototype.js"></script>
-		<script type="text/javascript" src="/static/js/scriptaculous.js"></script>
-		<script type="text/javascript">
-		var random_question = function() {
-		    // Build the array
-		    var questions = new Array;
-		    for (var n=0; n < 100; n++) {
-                {% for question in questions %}questions.push("{{question.question}}");{% endfor %}
-		    };
+        <script type="text/javascript" src="/static/js/scriptaculous.js"></script>
+        <script type="text/javascript">
+        Hash.prototype.keys = function() {
+          var k = new Array;
+          for(var i in this) if (this.hasOwnProperty(i)) {
+            k.push(i);
+          };
+          return k;
+        };
+        var cycle_questions = function() {
+            var questions_hash = new Hash;
+            {% for question in questions %}
+                    questions_hash['{{question.key()}}'] = '{{question.question}}';
+            {% endfor %}
+            var question = new Array;
+            questions = questions_hash.keys().sort();
+            questions.shift();
             // Loop
-                intervalID = setInterval ( function() {
-                    $('carousel').innerHTML = questions[questions.length - 1];
-                    //$('question_form').action = "";
-                    q = questions.shift();
-                    questions.push(q);
-                }, 3000);
-		};
+            intervalID = setInterval ( function() {
+                $('carousel').innerHTML = questions_hash[questions.last()];
+                $('question_form').action = "/question/" + questions.last();
+                $('question_form').method = "POST";
+                questions.push(questions.shift());
+            }, 3000);
+        };
+        function submit_vote(vote_value) {
+            $('vote_value').value = vote_value;
+            $('question_form').submit();
+        }
+        // Mmmh, curry!
+        var vote_yes = submit_vote.curry('yes');
+        var vote_no = submit_vote.curry('no');
         </script>
         <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
-		<link rel="STYLESHEET" type="text/css" href="/static/css/stylin.css?v=1" />
-	</head>
-	
-	<body onLoad="random_question();">
-	<!-- begin #traingle-container -->
-	<div class="triangle-container">
+        <link rel="STYLESHEET" type="text/css" href="/static/css/stylin.css?v=1" />
+    </head>
+    
+    <body onLoad="cycle_questions();">
+    <!-- begin #traingle-container -->
+    <div class="triangle-container">
 
-		<!-- begin #site-container -->
-		<div class="site-container">
-		
-		
-			<!-- begin #header -->
-			<div class="header">
-			      <h2>
-			         <span class="hidden-text">Is it Futureproof? (.com)</span>
-			         <img src="/static/img/isitfutureproof_logo.png" width="272" height="119" alt="Is It Futureproof? Logo">
-			      </h2>
-			</div>
-			<!-- end #header -->
-			
-			
-			<!-- begin #content -->
-			<div class="content">
+        <!-- begin #site-container -->
+        <div class="site-container">
+        
+        
+            <!-- begin #header -->
+            <div class="header">
+                  <h2>
+                     <span class="hidden-text">Is it Futureproof? (.com)</span>
+                     <img src="/static/img/isitfutureproof_logo.png" width="272" height="119" alt="Is It Futureproof? Logo">
+                  </h2>
+            </div>
+            <!-- end #header -->
+            
+            
+            <!-- begin #content -->
+            <div class="content">
 
-   		   <h1>Will we still <p class="carousel" id="carousel" onmouseOver="clearInterval(intervalID);">{{questions[0].question}}</p>in 20 years?</h1>
-              <form id='question_form' action='/question/{{questions[0].key()}}' method="POST">
-                  <input type="hidden" name="vote" value="yes" id="vote_value">
+           <h1>Will we still <p class="carousel" id="carousel" onmouseOver="clearInterval(intervalID);">{{questions[0].question}}</p>in 20 years?</h1>
+              <form id='question_form' action='/question/{{questions[0].key()}}/' method="POST">
+                  <input type="hidden" name="vote_value" value="yes" id="vote_value">
               </form>
-		      <ul>
-               <li><div class="yes-button"><a href="#" onmouseOver="clearInterval(intervalID);" onClick="$('vote_value').value = 'yes';$('question_form').submit();false;">yes</a></div></li>
-               <li><div class="no-button"><a href="#" onmouseOver="clearInterval(intervalID);" onClick="$('vote_value').value = 'no';$('question_form').submit();false;">no</a></div></li>
+              <ul>
+               <li><div class="yes-button"><a href="#" onmouseOver="clearInterval(intervalID);" onClick="vote_yes();">yes</a></div></li>
+               <li><div class="no-button"><a href="#" onmouseOver="clearInterval(intervalID);" onClick="vote_no();">no</a></div></li>
             </ul>
 
             <div class="info">
@@ -133,36 +149,36 @@
                   <li><p class="icon-fp_horz_line_short"></p></li>
                </ul>
             </div>
-			</div>
-			<!-- end #content -->
-			
-			
-			<!-- begin #submit -->
-			<div class="submit">
-			   <form action="{{ url_for('add_question') }}" method="post">
-				<p class="submit-head">Got a good one?</p>
-				<p class="caption">Great! Just fill in the blank:</p>
-				<h3>Will we still <input class="entry-form" type="text" name="entry" id="entry" value="" tabindex="1" />in 20 years?</h3>
+            </div>
+            <!-- end #content -->
+            
+            
+            <!-- begin #submit -->
+            <div class="submit">
+               <form action="{{ url_for('add_question') }}" method="post">
+                <p class="submit-head">Got a good one?</p>
+                <p class="caption">Great! Just fill in the blank:</p>
+                <h3>Will we still <input class="entry-form" type="text" name="entry" id="entry" value="" tabindex="1" />in 20 years?</h3>
 
-			      <ul>
+                  <ul>
                   <li><input class="yes-button-small" type="submit" value="yes" /></li>
                   <li><input class="no-button-small" type="submit" value="no" /></li>
                </ul>
 
             </form>
-			</div>
-			<!-- end #submit -->
-			
-			
-			<!-- begin #ad-row -->
-			<div class="ad-row">
-				<img src="/static/img/fp_fake_ads.jpg" />
-			</div>
-			<!-- end #ad-row --> 
-			
-			
-			<!-- begin #footer -->
-			<div class="footer">
+            </div>
+            <!-- end #submit -->
+            
+            
+            <!-- begin #ad-row -->
+            <div class="ad-row">
+                <img src="/static/img/fp_fake_ads.jpg" />
+            </div>
+            <!-- end #ad-row --> 
+            
+            
+            <!-- begin #footer -->
+            <div class="footer">
             <ul>
                <li><p class="footer-head">a <a href="#">jen</a> &amp; <a href="#">jens</a> joint.</p>
                    <p class="footer-email"><a href="mailto:info@isitfutureproof.com">info@isitfutureproof.com</a></p> 
@@ -186,15 +202,15 @@
                   </ul>
                </li>
             </ul>
-			</div>
-			<!-- end #footer -->
-			
-		</div>
-		<!-- end #site-container -->
-	</div>
-	<!-- end #triangle-container -->
-	
+            </div>
+            <!-- end #footer -->
+            
+        </div>
+        <!-- end #site-container -->
+    </div>
+    <!-- end #triangle-container -->
+    
 
-	
-	</body>
+    
+    </body>
 </html>

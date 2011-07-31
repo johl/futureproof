@@ -17,9 +17,9 @@ from application import views
 app.add_url_rule('/_ah/warmup', 'warmup', view_func=views.warmup)
 
 app.add_url_rule('/', 'home', view_func=views.home)
+app.add_url_rule('/question/<qid>/', 'question_result', view_func=views.question_result, methods=['POST'])
 app.add_url_rule('/question/<qid>/', 'question_result', view_func=views.question_result)
 app.add_url_rule('/question', 'question', view_func=views.question)
-app.add_url_rule('/result', 'question_result', view_func=views.question_result)
 app.add_url_rule('/leaderboard', 'leaderboard', view_func=views.leaderboard)
 app.add_url_rule('/add', 'add_question', view_func=views.add_question, methods=['POST'])  
 
