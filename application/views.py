@@ -50,10 +50,12 @@ def question_result(qid=None):
         question.save()
         question = Question.get(qid)
         percent = 0
+        stylepercent = "stylepercent-0"
         if (question.total > 0):
             TWOPLACES = Decimal(10) ** -2
             percent = float(Decimal(str(float(1.0*question.no/question.total)*100)).quantize(TWOPLACES))
-        return render_template('question_result.html', question=question.question, percent=percent, total=question.total, agreed=agree)
+            stylepercent = "style-" + str(int(percent))
+        return render_template('question_result.html', question=question.question, percent=percent, total=question.total, agreed=agree, stylepercent=stylepercent)
     else:
         return render_template('question_result.html')
 
