@@ -12,7 +12,9 @@ from types import *
 
 def home():
     questions = Question.gql( "WHERE aproved = 'yes'" ).fetch(limit=100)
-    if (not type(questions) == NoneType):
+    if (not questions == None):
+        import random
+        random.shuffle(questions)
         return render_template('index.html', questions=questions)
     else:
         return render_template('index.html')

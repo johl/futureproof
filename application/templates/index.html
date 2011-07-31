@@ -24,7 +24,7 @@
                     questions_hash['{{question.key()}}'] = '{{question.question}}';
             {% endfor %}
             var question = new Array;
-            questions = questions_hash.keys().sort();
+            questions = questions_hash.keys();
             questions.shift();
             // Loop
             intervalID = setInterval ( function() {
