@@ -10,21 +10,90 @@ from models import Question
 from decimal import Decimal
 from types import *
 import random
+TWOPLACES = Decimal(10) ** -2
 
 def home():
-    TWOPLACES = Decimal(10) ** -2
     questions = Question.gql( "WHERE aproved = 'yes'" ).fetch(limit=100)
-    top_yes = Question.gql( "WHERE aproved = 'yes' ORDER BY yes" ).fetch(limit=3)
-    top_yes = [{'question': entry.question, 'key': entry.key(), 'total': entry.total, 'style': "style-" + str(int(float(Decimal(str(float(1.0*entry.yes/entry.total)*100)).quantize(TWOPLACES)))) } for entry in top_yes]
-    top_no = Question.gql( "WHERE aproved = 'yes' ORDER BY no" ).fetch(limit=3)
-    top_no = [{'question': entry.question, 'key': entry.key(), 'total': entry.total, 'style': "style-" + str(int(float(Decimal(str(float(1.0*entry.no/entry.total)*100)).quantize(TWOPLACES)))) } for entry in top_no]
-    if (not questions == None):
+    if (len(questions) != 0 and questions != None):
         random.shuffle(questions)
+        top_yes = Question.gql( "WHERE aproved = 'yes' AND vote_yes !=0 ORDER BY vote_yes DESC" ).fetch(limit=3)
+        top_no = Question.gql( "WHERE aproved = 'yes' AND vote_no!=0 ORDER BY vote_no DESC" ).fetch(limit=3)
     else:
-        questions = [{question: 'have fun'}]
+        """
+        Nothing in the database, let's fill it up with some stock questions.
+        """
+        stock_questions = (
+                "have DVDs",
+                "have desktop computers",
+                "have optical media in the same size and shape as CDs and DVDs",
+                "have free bags with a purchase from a store",
+                "have cheap wine in bottles",
+                "have large grocery stores that you make orders from",
+                "have CDs",
+                "have written signatures on credit card receipts",
+                "have paper receipts for purchases",
+                "have large grocery stores that you visit in person",
+                "have IPv4",
+                "have credit cards based upon magnetic strips",
+                "have voice-only phone calls",
+                "have IPv6",
+                "have refridgerator magnets",
+                "have corks actually made out of cork",
+                "have broadcast television",
+            )
+        for question in stock_questions:
+            q = Question(question=question, vote_yes=0, vote_no=0, total=0, aproved="yes")
+            q.save()
+            questions.append(q)
+            top_yes = questions
+            top_no = questions
+    top_yes = [i for i in top_yes if i.vote_yes != 0]
+    top_yes = [
+                {
+                'question': entry.question,
+                'key': entry.key(),
+                'total': entry.total,
+                'style': "style-" + str(int(float(Decimal(str(float(1.0*entry.vote_yes/entry.total)*100)).quantize(TWOPLACES)))),
+                'percent': float(Decimal(str(float(1.0*entry.vote_yes/entry.total)*100)).quantize(TWOPLACES))
+                } for entry in top_yes if entry.total != 0]
+    top_yes.sort(lambda x, y: cmp(x['percent'], y['percent']), reverse=True)
+    top_no = [i for i in top_no if i.vote_no != 0]
+    top_no = [
+                {
+                'question': entry.question,
+                'key': entry.key(),
+                'total': entry.total,
+                'style': "style-" + str(int(float(Decimal(str(float(1.0*entry.vote_no/entry.total)*100)).quantize(TWOPLACES)))),
+                'percent': float(Decimal(str(float(1.0*entry.vote_no/entry.total)*100)).quantize(TWOPLACES))
+                } for entry in top_no if entry.total != 0]
+    top_no.sort(lambda x, y: cmp(x['percent'], y['percent']), reverse=True)
     return render_template('index.html', questions=questions, top_yes=top_yes, top_no=top_no)
     
 
+def fill():
+    stock_questions = (
+            "have DVDs",
+            "have desktop computers",
+            "have optical media in the same size and shape as CDs and DVDs",
+            "have free bags with a purchase from a store",
+            "have cheap wine in bottles",
+            "have large grocery stores that you make orders from",
+            "have CDs",
+            "have written signatures on credit card receipts",
+            "have paper receipts for purchases",
+            "have large grocery stores that you visit in person",
+            "have IPv4",
+            "have credit cards based upon magnetic strips",
+            "have voice-only phone calls",
+            "have IPv6",
+            "have refridgerator magnets",
+            "have corks actually made out of cork",
+            "have broadcast television",
+        )
+    for question in stock_questions:
+        q = Question(question=question, vote_yes=0, vote_no=0, total=0, aproved="yes")
+        q.save()
+    
 def add_question():
     """Add a question to the database"""
     if ('entry' in request.form):
@@ -47,24 +116,23 @@ def question_result(qid=None):
         question = Question.get(qid)
         if (question.total == None):
             question.total = 0
-        if (question.no == None):
-            question.no = 0
-        if (question.yes == None):
-            question.yes = 0
+        if (question.vote_no == None):
+            question.vote_no = 0
+        if (question.vote_yes == None):
+            question.vote_yes = 0
         question.total = question.total + 1
         if (request.form['vote_value'] == "yes"):
-            question.yes = question.yes +1
+            question.vote_yes = question.vote_yes +1
             agree = "disagree"
         if (request.form['vote_value'] == "no"):
-            question.no = question.no +1
+            question.vote_no = question.vote_no +1
             agree = "agree"
         question.save()
         question = Question.get(qid)
         percent = 0
         stylepercent = "style-0"
         if (question.total > 0):
-            TWOPLACES = Decimal(10) ** -2
-            percent = float(Decimal(str(float(1.0*question.no/question.total)*100)).quantize(TWOPLACES))
+            percent = float(Decimal(str(float(1.0*question.vote_no/question.total)*100)).quantize(TWOPLACES))
             stylepercent = "style-" + str(int(percent))
         return render_template('question_result.html', qid=qid, question=question.question, percent=percent, total=question.total, agreed=agree, stylepercent=stylepercent)
     else:

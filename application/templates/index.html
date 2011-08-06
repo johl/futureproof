@@ -97,7 +97,7 @@
                     {% for positive_lead in top_yes %}
                      <li class="item-box {{positive_lead.style}}">
                          <a href="/question/{{positive_lead.key}}">
-                           <p class="percentage positive_lead.style">100 &#37;</p>
+                           <p class="percentage {{positive_lead.style}}">{{positive_lead.percent}} &#37;</p>
                            <p class="item-text">“{{positive_lead.question}}”</p>
                            <p class="icon-fp_comment"><span class="caption">2 comments, {{positive_lead.total}} votes </span></p>
                            </a>
@@ -114,7 +114,7 @@
                      {% for negative_lead in top_no %}
                       <li class="item-box {{negative_lead.style}}">
                           <a href="/question/{{negative_lead.key}}">
-                            <p class="percentage negative_lead.style">100 &#37;</p>
+                            <p class="percentage {{negative_lead.style}}">{{negative_lead.percent}} &#37;</p>
                             <p class="item-text">“{{negative_lead.question}}”</p>
                             <p class="icon-fp_comment"><span class="caption">2 comments, {{negative_lead.total}} votes </span></p>
                             </a>
@@ -124,15 +124,18 @@
                </div>
             </div>
 
-           <!-- <div class="view-all-row">
+         <div class="view-all-row">
                <ul>
+                   <li><p></p></li>
+                <!-- 
                   <li><p class="icon-fp_horz_line_short"></p></li>
                   <li><p class="caption"><a href="#">View all.</a></p></li>
                   <li><a href="#"><p class="icon-fp_arrow"></p></a></li>
                   <li><p class="icon-fp_horz_line_short"></p></li>
+                  -->
                </ul>
-            </div> -->
-            </div>
+            </div> 
+        </div>
             <!-- end #content -->
             
             

@@ -19,7 +19,7 @@ class Question(db.Model):
     question = db.StringProperty(required=True)
     timestamp = db.DateTimeProperty(auto_now_add=True)
     aproved = db.StringProperty(required=True)
-    yes = db.IntegerProperty()
-    no = db.IntegerProperty()
+    vote_yes = db.IntegerProperty()
+    vote_no = db.IntegerProperty()
     total = db.IntegerProperty()
 
