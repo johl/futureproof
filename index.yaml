@@ -14,3 +14,13 @@ indexes:
   properties:
   - name: aproved
   - name: key
+
+- kind: Question
+  properties:
+  - name: aproved
+  - name: no
+
+- kind: Question
+  properties:
+  - name: aproved
+  - name: yes

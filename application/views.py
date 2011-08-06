@@ -12,12 +12,18 @@ from types import *
 import random
 
 def home():
+    TWOPLACES = Decimal(10) ** -2
     questions = Question.gql( "WHERE aproved = 'yes'" ).fetch(limit=100)
+    top_yes = Question.gql( "WHERE aproved = 'yes' ORDER BY yes" ).fetch(limit=3)
+    top_yes = [{'question': entry.question, 'key': entry.key(), 'total': entry.total, 'style': "style-" + str(int(float(Decimal(str(float(1.0*entry.yes/entry.total)*100)).quantize(TWOPLACES)))) } for entry in top_yes]
+    top_no = Question.gql( "WHERE aproved = 'yes' ORDER BY no" ).fetch(limit=3)
+    top_no = [{'question': entry.question, 'key': entry.key(), 'total': entry.total, 'style': "style-" + str(int(float(Decimal(str(float(1.0*entry.no/entry.total)*100)).quantize(TWOPLACES)))) } for entry in top_no]
     if (not questions == None):
         random.shuffle(questions)
-        return render_template('index.html', questions=questions)
     else:
-        return render_template('index.html')
+        questions = [{question: 'have fun'}]
+    return render_template('index.html', questions=questions, top_yes=top_yes, top_no=top_no)
+    
 
 def add_question():
     """Add a question to the database"""

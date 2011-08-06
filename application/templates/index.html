@@ -94,24 +94,15 @@
                <div class="leader-yes">
                   <ul>
                      <li class="item-box leader-title"><h3 class="leader-subhead">Futureproof!</h3><p class="caption-reverse">These things have staying power!</p></li>
-                     <li class="item-box style-100"><a href="#">
-                           <p class="percentage style-100">100 &#37;</p>
-                           <p class="item-text">“Make movies”</p>
-                           <p class="icon-fp_comment"><span class="caption">2 comments, 12,986 votes </span></p>
+                    {% for positive_lead in top_yes %}
+                     <li class="item-box {{positive_lead.style}}">
+                         <a href="/question/{{positive_lead.key}}">
+                           <p class="percentage positive_lead.style">100 &#37;</p>
+                           <p class="item-text">“{{positive_lead.question}}”</p>
+                           <p class="icon-fp_comment"><span class="caption">2 comments, {{positive_lead.total}} votes </span></p>
                            </a>
                      </li>
-                     <li class="item-box style-83"><a href="#">
-                           <p class="percentage style-83">82.6 &#37;</p>
-                           <p class="item-text">“write text that is so long it will break the frame of the box it’s supposed to be in”</p>
-                           <p class="icon-fp_comment"><span class="caption">2 comments, 12,986 votes </span></p>
-                           </a>
-                     </li>
-                     <li class="item-box style-50"><a href="#">
-                           <p class="percentage style-50">49.9 &#37;</p>
-                           <p class="item-text">“Make movies”</p>
-                           <p class="icon-fp_comment"><span class="caption">2 comments, 12,986 votes </span></p>
-                           </a>
-                     </li>
+                     {% endfor %}
                   </ul>
                </div>
                
@@ -120,35 +111,27 @@
                      <li class="item-box leader-title"><h3 class="leader-subhead">Failboat!</h3>
                         <p class="caption-reverse">Say goodbye... these things are going the way of the Dodo.</p>
                      </li>
-                     <li class="item-box style-26"><a href="#">
-                           <p class="percentage style-26">25.8 &#37;</p>
-                           <p class="item-text">“Make movies”</p>
-                           <p class="icon-fp_comment"><span class="caption">2 comments, 12,986 votes </span></p>
-                           </a>
-                     </li>
-                     <li class="item-box style-13"><a href="#">
-                           <p class="percentage style-13">13.3 &#37;</p>
-                           <p class="item-text">“Make movies”</p>
-                           </a>
-                     </li>
-                     <li class="item-box style-0"><a href="#">
-                           <p class="percentage style-0">0 &#37;</p>
-                           <p class="item-text">“Make movies”</p>
-                           <p class="icon-fp_comment"><span class="caption">2 comments, 12,986 votes </span></p>
-                           </a>
-                     </li>
+                     {% for negative_lead in top_no %}
+                      <li class="item-box {{negative_lead.style}}">
+                          <a href="/question/{{negative_lead.key}}">
+                            <p class="percentage negative_lead.style">100 &#37;</p>
+                            <p class="item-text">“{{negative_lead.question}}”</p>
+                            <p class="icon-fp_comment"><span class="caption">2 comments, {{negative_lead.total}} votes </span></p>
+                            </a>
+                      </li>
+                      {% endfor %}
                   </ul>
                </div>
             </div>
 
-            <div class="view-all-row">
+           <!-- <div class="view-all-row">
                <ul>
                   <li><p class="icon-fp_horz_line_short"></p></li>
                   <li><p class="caption"><a href="#">View all.</a></p></li>
                   <li><a href="#"><p class="icon-fp_arrow"></p></a></li>
                   <li><p class="icon-fp_horz_line_short"></p></li>
                </ul>
-            </div>
+            </div> -->
             </div>
             <!-- end #content -->
             
