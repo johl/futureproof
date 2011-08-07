@@ -92,8 +92,8 @@ h3
   background: $form-box;
   padding: 10px;
   text-align: center;
-  margin: 10px auto 20px auto;
-  width:600px;
+  margin: 0 auto;
+  width: 580px;
   }
     
 .caption
@@ -224,6 +224,14 @@ span.first
   @include question-result;
   font-style: italic;
   }
+  
+.agree{
+  color:$yes-color;
+}
+
+.disagree{
+  color:$no-color;
+}
   
 .next-question{
   font-style: italic;
