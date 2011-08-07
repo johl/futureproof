@@ -63,10 +63,10 @@ def home():
                 'question': entry.question,
                 'key': entry.key(),
                 'total': entry.total,
-                'style': "style-" + str(int(float(Decimal(str(float(1.0*entry.vote_no/entry.total)*100)).quantize(TWOPLACES)))),
-                'percent': float(Decimal(str(float(1.0*entry.vote_no/entry.total)*100)).quantize(TWOPLACES))
+                'style': "style-" + str(100- int(float(Decimal(str(float(1.0*entry.vote_no/entry.total)*100)).quantize(TWOPLACES)))),
+                'percent': 100.00 - float(Decimal(str(float(1.0*entry.vote_no/entry.total)*100)).quantize(TWOPLACES))
                 } for entry in top_no if entry.total != 0]
-    top_no.sort(lambda x, y: cmp(x['percent'], y['percent']), reverse=True)
+    top_no.sort(lambda x, y: cmp(x['percent'], y['percent']))
     return render_template('index.html', questions=questions, top_yes=top_yes, top_no=top_no)
     
 
@@ -111,6 +111,8 @@ def random_question(qid=None):
         return redirect("/question/%s/" % question.key())
 
 def question_result(qid=None):
+    import urllib
+    escaped_url=urllib.quote_plus("http://www.isitfutureproof.com/question/" + qid)
     if ('vote_value' in request.form):
         agree = "didn't tell us if you agree or disagree"
         question = Question.get(qid)
@@ -134,10 +136,10 @@ def question_result(qid=None):
         if (question.total > 0):
             percent = float(Decimal(str(float(1.0*question.vote_no/question.total)*100)).quantize(TWOPLACES))
             stylepercent = "style-" + str(int(percent))
-        return render_template('question_result.html', qid=qid, question=question.question, percent=percent, total=question.total, agreed=agree, stylepercent=stylepercent)
+        return render_template('question_result.html', escaped_url=escaped_url, qid=qid, question=question.question, percent=percent, total=question.total, agreed=agree, stylepercent=stylepercent)
     else:
         question = Question.get(qid)
-        return render_template('question_clean.html', qid=qid, question=question.question)
+        return render_template('question_clean.html', qid=qid, escaped_url=escaped_url, question=question.question)
 
 def leaderboard():
     """template for leaderboard"""
