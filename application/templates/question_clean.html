@@ -20,6 +20,7 @@
         var vote_yes = submit_vote.curry('yes');
         var vote_no = submit_vote.curry('no');
         </script>
+        <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
 	</head>
 	
 	<body>
@@ -30,32 +31,60 @@
 		<div class="site-container">
 		
 		
-			<!-- begin #header -->
-			<div class="header">
-			      <h2>
-			         <span class="hidden-text">Is it Futureproof? (.com)</span>
-			         <img src="/static/img/isitfutureproof_logo.png" width="272" height="119" alt="Is It Futureproof? Logo">
-			      </h2>
-			</div>
-			<!-- end #header -->
+         <!-- begin #header -->
+         <div class="header">
+               <a href="http://www.isitfutureproof.com">
+                  <h2>
+                  <span class="hidden-text">Is it Futureproof? (.com)</span>
+                  <img src="/static/img/isitfutureproof_logo.png" width="272" height="119" alt="Is It Futureproof? Logo">
+                  </h2>
+               </a>
+         </div>
+         <!-- end #header -->
 			
 			
 			<!-- begin #content -->
-			<div class="content question-alone">
+			<div class="content">
             <form id='question_form' action='/question/{{qid}}/' method="POST">
                       <input type="hidden" name="vote_value" value="yes" id="vote_value">
            </form>
-   		   <h1>Will we still <p class="carousel">{{question}}</p>in 20 years?</h1>
+   		   <h1>Will we still <div class="fill-in-the-blank"><p class="carousel">{{question}}</p></div>in 20 years?</h1>
 
 		      <ul>
                   <li><div class="yes-button"><a href="#" onClick="vote_yes();">yes</a></div></li>
                   <li><div class="no-button"><a href="#" onClick="vote_no();">no</a></div></li>
 
             </ul>
+            
+            <div class="question-cap-container">
+               <div class="info-tease-box">
+                  <h3>Wait...what?</h3>
+                  <p class="caption">New to the future? Perhaps you'd like to 
+                  <span class="sort-option"><a href="#">learn more. </a></span></p>
+               </div>
+
+               <div class="share-question-box">
+                  <h3>Share this question:</h3>
+                  <ul class="list-left question-clean-share">
+                     <li><a href="#"><p class="icon-fp_twitter"><span class="hidden-text">Tweet this! </span></p></a></li>
+                     <li><a href="#"><p class="icon-fp_facebook"><span class="hidden-text">Share on Facebook! </span></p></a></li>
+                     <li><a href="#"><p class="icon-fp_email"><span class="hidden-text">Email to your friends. </span></p></a></li>
+                     <li><g:plusone size="medium"></g:plusone></li>
+                 </ul>
+               </div>
+            </div>
+
+            <div class="view-all-row question-alone">
+                  <ul>
+                     <li><p class="icon-fp_horz_line_short"></p></li>
+                     <li><p class="caption"><a href="#">See how the future is stacking up. Check out the leaderboard.</a></p></li>
+                     <li><a href="#"><p class="icon-fp_arrow"></p></a></li>
+                     <li><p class="icon-fp_horz_line_short"></p></li>
+                  </ul>
+               </div>
          
          </div>
 			<!-- end #content -->
-			
 			
 			<!-- begin #submit -->
 			<div class="submit">
@@ -74,51 +103,48 @@
 			<!-- end #submit -->
 			
 			
-			<!-- begin #ad-row -->
-			<div class="ad-row">
-				<img src="/static/img/fp_fake_ads.jpg" />
-			</div>
-			<!-- end #ad-row --> 
-			
-			
-			<!-- begin #footer -->
-			<div class="footer">
-            <ul>
-               <li><p class="footer-head">a <a href="#">jen</a> &amp; <a href="#">jens</a> joint.</p>
-                   <p class="footer-email"><a href="mailto:info@isitfutureproof.com">info@isitfutureproof.com</a></p> 
-               </li>
-               <li><p class="icon-fp_line_vert"></p></li>
-               <li>
-                  <p class="caption-reverse">Mobile coming soon &hellip;</p>
-                  <ul>
-                     <li><a href="#"><p class="icon-fp_apple"><span class="hidden-text">iOS app </span></p></a></li>
-                     <li><a href="#"><p class="icon-fp_android"><span class="hidden-text">Android app </span></p></a></li>
-                  </ul>
-               </li>
-               <li><p class="icon-fp_line_vert"></p></li>
-               <li>
-                  <p class="caption-reverse">Sharing is caring &hellip;</p>
-                  <ul>
-                     <li><a href="#"><p class="icon-fp_twitter"><span class="hidden-text">Tweet this! </span></p></a></li>
-                     <li><a href="#"><p class="icon-fp_facebook"><span class="hidden-text">Share on Facebook! </span></p></a></li>
-                     <li><a href="#"><p class="icon-fp_email"><span class="hidden-text">Email to your friends. </span></p></a></li>
-                     <li class="fb-like">
-                           <div id="fb-root"></div>
-                           <script src="http://connect.facebook.net/en_US/all.js#appId=113139628777594&amp;xfbml=1"></script>
-                           <fb:like href="" send="false" layout="button_count" width="75" show_faces="false" font=""></fb:like>
-                     </li>
-                  </ul>
-               </li>
-            </ul>
-			</div>
-			<!-- end #footer -->
-			
-		</div>
-		<!-- end #site-container -->
-	</div>
-	<!-- end #triangle-container -->
-	
+        <!-- begin #ad-row -->
+         <div class="ad-row">
 
-	
-	</body>
+         </div>
+         <!-- end #ad-row --> 
+
+
+         <!-- begin #footer -->
+         <div class="footer">
+         <ul>
+            <li><p class="footer-head">a <a href="#">jen</a> &amp; <a href="#">jens</a> joint.</p>
+                <p class="footer-email"><a href="mailto:info@isitfutureproof.com">info@isitfutureproof.com</a></p> 
+            </li>
+            <li><p class="icon-fp_line_vert"></p></li>
+            <li>
+               <p class="caption-reverse">Mobile coming soon &hellip;</p>
+               <ul>
+                  <li><a href="#"><p class="icon-fp_apple"><span class="hidden-text">iOS app </span></p></a></li>
+                  <li><a href="#"><p class="icon-fp_android"><span class="hidden-text">Android app </span></p></a></li>
+               </ul>
+            </li>
+            <li><p class="icon-fp_line_vert"></p></li>
+            <li>
+               <p class="caption-reverse">Sharing is caring &hellip;</p>
+               <ul>
+                  <li><a href="#"><p class="icon-fp_twitter"><span class="hidden-text">Tweet this! </span></p></a></li>
+                  <li><a href="#"><p class="icon-fp_facebook"><span class="hidden-text">Share on Facebook! </span></p></a></li>
+                  <li><a href="#"><p class="icon-fp_email"><span class="hidden-text">Email to your friends. </span></p></a></li>
+                  <li><g:plusone size="medium"></g:plusone></li>
+               </ul>
+            </li>
+         </ul>
+         </div>
+         <!-- end #footer -->
+
+     </div>
+     <!-- end #site-container -->
+ </div>
+ <!-- end #triangle-container -->
+
+
+
+ </body>
 </html>
+
