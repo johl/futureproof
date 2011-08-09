@@ -1,0 +1,127 @@
+#dsq-content .dsq-more-button {
+background: none repeat scroll 0 0 #EDF7FF;
+border: none;
+border-radius: 0;
+box-shadow: none;
+color: #000000;
+display: block;
+font-size: 14px;
+font-style: italic;
+margin: 0 0 5px 0;
+padding: 10px 20px;
+text-align: center;
+text-decoration: none;
+text-shadow: none;
+clear: both;
+font-weight: normal;
+}
+
+#dsq-content .dsq-more-button:hover {
+background: #00aeef;
+color: #fff;
+}
+#dsq-content .dsq-comment-meta li, #dsq-content .dsq-comment-actions li {
+margin: 0 12px 5px 0;}
+
+#dsq-content #dsq-footer {
+margin: 0 0 5px 0;
+}
+
+
+
+#disqus_thread {
+margin-bottom: 0;
+}
+
+#dsq-content ul, #dsq-content li {text-align: left;}
+
+#dsq-content ul {left: 0;}
+#dsq-content li {right: 0;}
+
+.dsq-commenter-name {
+font-family:JosefinSlabLight, Georgia, sans-serif;
+font-size: 24px;
+color: #000;
+font-weight: normal;
+text-transform: uppercase;}
+
+.dsq-comment-header {
+background: none;
+border: none;
+border-radius: none !important;
+padding: 5px 35px 5px 0;
+max-height: auto;
+line-height: auto;
+}
+
+*|*:link, *|*:visited {
+color: #00aeef;
+}
+
+#dsq-content h3{
+margin: 0 0 1.5em;
+position: static;
+color: #fff;
+font-size:  30px;
+line-height: 40px;
+font-weight: normal;
+text-transform: uppercase;
+font-family: "SteelfishRegular", Arial, sans-serif;
+padding: 10px;
+background: #000;
+margin: 0 0 20px;
+}
+
+#dsq-account-dropdown {
+margin: 20px 10px;
+}
+
+#dsq-sort-by select {margin: 20px 10px 0 0;}
+
+.dsq-collapse-toggle {
+padding: 0px;
+top: 2px;
+}
+
+.dsq-comment-message {
+line-height: auto;
+color: #000;
+font-size: 12px;
+}
+
+.dsq-post-tools .dsq-post-as .dsq-button, .dsq-post-tools .dsq-post-as .dsq-button:active,  .dsq-comment-actions a, #dsq-account-dropdown a {
+background: #6aac10;
+border: none;
+border-radius: 10px;
+box-shadow: none;
+color: #fff;
+font-size: 11px;
+height: auto;
+line-height: auto;
+margin: 0;
+padding: 3px 10px;
+position: relative;
+right: 0;
+text-shadow: none;
+top: 0;
+z-index: 2;
+opacity: 1;
+font-weight: bold;
+text-decoration: none;
+font-family: Arial,sans-serif;
+}
+
+.dsq-post-tools .dsq-post-as .dsq-button:hover, .dsq-comment-actions a:hover, #dsq-account-dropdown a:hover{background: #00aeef;}
+
+.dsq-comment-meta a{
+color: #00aeef;
+font-style: italic;
+opacity: 1;
+text-decoration: none;
+}
+
+#dsq-content .dsq-attach-media .dsq-attach-media-container {margin: 0 0 0 10px;}
+
+#dsq-pagination{clear: both;}
+
+#dsq-subscribe{clear: both;}
