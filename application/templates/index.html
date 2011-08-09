@@ -37,6 +37,7 @@
         function submit_vote(vote_value) {
             $('vote_value').value = vote_value;
             $('question_form').submit();
+            return false;
         }
         // Mmmh, curry!
         var vote_yes = submit_vote.curry('yes');
