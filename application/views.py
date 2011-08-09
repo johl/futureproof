@@ -99,7 +99,7 @@ def add_question():
     if ('entry' in request.form):
         q = Question(question=request.form['entry'], aproved="yes")
         q.save()
-    return redirect(url_for('home'))
+    return render_template('question_submit.html', question=q.question)
     
 def random_question(qid=None):
     """Return a random question that isn't the one this was linked from"""

@@ -43,7 +43,7 @@
             <div class="question-page">
                <div class="question-submit">
                   <p>Thanks for your addition!</p>
-                  <h3 class="subhead"> Will we still <span class="question-in-context">borrow library books</span> in 20 years? </h3>
+                  <h3 class="subhead"> Will we still <span class="question-in-context">{{question}}</span> in 20 years? </h3>
                
                   <p>Got something more to say about it? Leave your comment below.</p>
                   <p class="caption">"Those who vote on the future are doomed to re-tweet it!"</p>
@@ -65,8 +65,22 @@
                   </ul>
                </div>
                
-               <!-- stick disqus here -->
-               <img style="margin-top: 50px" src="/static/img/fp_dummy_comments.png" width="610" height="741" alt="Fp Dummy Comments">
+                  <div id="disqus_thread"></div>
+                  <script type="text/javascript">
+                      var disqus_shortname = 'isitfutureproof';
+
+                      var disqus_identifier = '{{qid}}';
+                      var disqus_url = 'http://www.isitfutureproof.com/question/{{qid}}';
+                      (function() {
+                          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                          dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                      })();
+                  </script>
+                  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                  <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+   			   </div>
+   			</div>
                
             </div>
 			</div>
