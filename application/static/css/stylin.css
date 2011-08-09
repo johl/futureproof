@@ -301,35 +301,38 @@ span.first {
   font-size: 18px;
   line-height: 22px;
   font-style: italic;
+  background: #fff;
+  padding: 5px 10px;
+  border-radius: 20px;
 }
 
-/* line 228, ../../sass/partials/_fonts.scss */
+/* line 231, ../../sass/partials/_fonts.scss */
 .agree {
   color: #6aac10;
 }
 
-/* line 232, ../../sass/partials/_fonts.scss */
+/* line 235, ../../sass/partials/_fonts.scss */
 .disagree {
   color: #da2f30;
 }
 
-/* line 236, ../../sass/partials/_fonts.scss */
+/* line 239, ../../sass/partials/_fonts.scss */
 .next-question {
   font-style: italic;
   font-size: 18px;
 }
-/* line 239, ../../sass/partials/_fonts.scss */
+/* line 242, ../../sass/partials/_fonts.scss */
 .next-question:hover {
   color: #00aeef;
 }
 
-/* line 242, ../../sass/partials/_fonts.scss */
+/* line 245, ../../sass/partials/_fonts.scss */
 .leaderboard-title {
   margin-bottom: 0;
   line-height: 60px;
 }
 
-/* line 248, ../../sass/partials/_fonts.scss */
+/* line 251, ../../sass/partials/_fonts.scss */
 .tagline {
   font: Georgia, "Times New Roman", serif;
   color: #000;

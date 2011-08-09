@@ -223,6 +223,9 @@ span.first
   { 
   @include question-result;
   font-style: italic;
+  background: #fff;
+  padding: 5px 10px;
+  border-radius: 20px;
   }
   
 .agree{
