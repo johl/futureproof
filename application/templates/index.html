@@ -37,7 +37,6 @@
         function submit_vote(vote_value) {
             $('vote_value').value = vote_value;
             $('question_form').submit();
-            return false;
         }
         // Mmmh, curry!
         var vote_yes = submit_vote.curry('yes');
@@ -75,8 +74,8 @@
                   <input type="hidden" name="vote_value" value="yes" id="vote_value">
               </form>
               <ul>
-               <li><div class="yes-button"><a href="#" onmouseOver="clearInterval(intervalID);" onClick="vote_yes();">yes</a></div></li>
-               <li><div class="no-button"><a href="#" onmouseOver="clearInterval(intervalID);" onClick="vote_no();">no</a></div></li>
+               <li><div class="yes-button"><a href="#" onmouseOver="clearInterval(intervalID);return false;" onClick="vote_yes();return false;">yes</a></div></li>
+               <li><div class="no-button"><a href="#" onmouseOver="clearInterval(intervalID);return false;" onClick="vote_no();return false;">no</a></div></li>
             </ul>
 
             <div class="info">
