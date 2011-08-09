@@ -136,7 +136,7 @@ def question_result(qid=None):
         if (question.total > 0):
             percent = float(Decimal(str(float(1.0*question.vote_no/question.total)*100)).quantize(TWOPLACES))
             stylepercent = "style-" + str(int(percent))
-        return render_template('question_result.html', escaped_url=escaped_url, qid=qid, question=question.question, percent=percent, total=question.total, agreed=agree, stylepercent=stylepercent)
+        return render_template('question_result.html', escaped_url=escaped_url, qid=qid, question=question.question, percent=percent, vote_no=question.vote_no, total=question.total, agreed=agree, stylepercent=stylepercent)
     else:
         question = Question.get(qid)
         return render_template('question_clean.html', qid=qid, escaped_url=escaped_url, question=question.question)
