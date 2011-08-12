@@ -74,8 +74,8 @@
                   <input type="hidden" name="vote_value" value="yes" id="vote_value">
               </form>
               <ul>
-               <li><div class="yes-button"><a href="#" onmouseOver="clearInterval(intervalID);" onClick="vote_yes();">yes</a></div></li>
-               <li><div class="no-button"><a href="#" onmouseOver="clearInterval(intervalID);" onClick="vote_no();">no</a></div></li>
+               <li><div class="yes-button"><a href="#" onmouseOver="clearInterval(intervalID);return false;" onClick="vote_yes();return false;">yes</a></div></li>
+               <li><div class="no-button"><a href="#" onmouseOver="clearInterval(intervalID);return false;" onClick="vote_no();return false;">no</a></div></li>
             </ul>
 
             <div class="info">
@@ -90,6 +90,7 @@
 				<p>Have fun with it! Think of it like "Hot or Not" for the future. We hope some will make you think and others will make you laugh. Once you’ve voted on a few predictions, add some of you own, or share it with your friends. And remember… the best way to predict the future is to create it!</p>
             </div>
 
+            <!--
             <ul>
                <li><p class="icon-fp_horz_line"></p></li>
                <li><h3 class="subhead">Dig it? <span class="caption">Then share it!</span></h3></li>
@@ -99,6 +100,7 @@
                <li><g:plusone size="medium"></g:plusone></li>
                <li><p class="icon-fp_horz_line"></p></li>
             </ul>
+            -->
 
             <div class="leaderboard-tease">
                <div class="leader-yes">
@@ -189,6 +191,7 @@
                </li>
                <li><p class="icon-fp_line_vert"></p></li>
                <li>
+                   <!-- 
                   <p class="caption-reverse">Sharing is caring &hellip;</p>
                   <ul>
                      <li><a href="#"><p class="icon-fp_twitter"><span class="hidden-text">Tweet this! </span></p></a></li>
@@ -196,6 +199,7 @@
                      <li><a href="#"><p class="icon-fp_email"><span class="hidden-text">Email to your friends. </span></p></a></li>
                      <li><g:plusone size="medium"></g:plusone></li>
                   </ul>
+                  -->
                </li>
             </ul>
             </div>
