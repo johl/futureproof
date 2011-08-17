@@ -19,6 +19,10 @@
           return k;
         };
         var cycle_questions = function() {
+            //ToolTip  
+            var tooltip = new Control.ToolTip($('tooltip'),'Windows can also act as tool tips.',{  
+                className: 'tooltip'  
+            });
             var questions_hash = new Hash;
             {% for question in questions %}
                     questions_hash['{{question.key()}}'] = '{{question.question}}';
@@ -29,13 +33,13 @@
             // Loop
             intervalID = setInterval ( function() {
                 $('carousel').innerHTML = questions_hash[questions.last()];
-                $('question_form').action = "/question/" + questions.last();
+                $('question_form').action = "/question/" + questions.last;
                 $('question_form').method = "POST";
                 questions.push(questions.shift());
             }, 3000);
         };
-        function submit_vote(vote_value) {
-            $('vote_value').value = vote_value;
+        function submit_vote(vote) {
+            $('question_form').vote_value.value = vote;
             $('question_form').submit();
         }
         // Mmmh, curry!
@@ -178,7 +182,7 @@
             <!-- begin #footer -->
             <div class="footer">
             <ul>
-               <li><p class="footer-head">a <a href="#">jen</a> &amp; <a href="#">jens</a> joint.</p>
+               <li><p class="footer-head">a <a href="#" class="tooltip">jen</a> &amp; <a href="#">jens</a> joint.</p>
                    <p class="footer-email"><a href="mailto:info@isitfutureproof.com">info@isitfutureproof.com</a></p> 
                </li>
                <li><p class="icon-fp_line_vert"></p></li>
