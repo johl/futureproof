@@ -8,9 +8,12 @@
         <meta name="keywords" content="future, futureproof"/>
         <meta name="author" content="jennifer gergen, Jens Ohlig" />
         <meta name="ROBOTS" content="ALL" />
+        <script src="http://cdn.jquerytools.org/1.2.6/full/jquery.tools.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="http://static.flowplayer.org/tools/css/standalone.css"/>
         <script type="text/javascript" src="/static/js/prototype.js"></script>
         <script type="text/javascript" src="/static/js/scriptaculous.js"></script>
         <script type="text/javascript">
+        jQuery.noConflict();
         Hash.prototype.keys = function() {
           var k = new Array;
           for(var i in this) if (this.hasOwnProperty(i)) {
@@ -19,10 +22,7 @@
           return k;
         };
         var cycle_questions = function() {
-            /* //ToolTip  
-            var tooltip = new Control.ToolTip($('tooltip'),'Windows can also act as tool tips.',{  
-                className: 'tooltip'  
-            }); */
+            jQuery("#name-tooltip").tooltip();
             var questions_hash = new Hash;
             {% for question in questions %}
                     questions_hash['{{question.key()}}'] = '{{question.question}}';
@@ -46,6 +46,31 @@
         var vote_no = submit_vote.curry('no');
         </script>
         <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+        <script type="text/javascript">
+
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-27313779-1']);
+          _gaq.push(['_trackPageview']);
+
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+
+        </script>
+        <style>
+        .tooltip {
+        	display:none;
+        	background:transparent url("http://flowplayer.org//tools/img/tooltip/black_arrow.png");
+        	font-size:12px;
+        	height:70px;
+        	width:160px;
+        	padding:25px;
+        	color:#fff;	
+        }
+        </style>
+        </head>
         <link rel="STYLESHEET" type="text/css" href="/static/css/stylin.css?v=1" />
     </head>
     
@@ -181,7 +206,7 @@
             <!-- begin #footer -->
             <div class="footer">
             <ul>
-               <li><p class="footer-head">a <a href="#" class="tooltip">jen</a> &amp; <a href="#">jens</a> joint.</p>
+               <li><p class="footer-head">a <a href="#" class="name-tooltip" onClick="return false;">jen</a><span class="tooltip">jennifer anne gergen!</span> &amp; <a href="#" class="name-tooltip" onClick="return false;">jens</a> joint.</p>
                    <p class="footer-email"><a href="mailto:info@isitfutureproof.com">info@isitfutureproof.com</a></p> 
                </li>
                <li><p class="icon-fp_line_vert"></p></li>
